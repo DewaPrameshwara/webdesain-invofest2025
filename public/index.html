@@ -3,10 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Home | HeyHealth</title>
+  <link rel="Icon" type="png" href="../asets/HeyHealth-Logo.png">
   <link rel="stylesheet" href="../src/style.css">
 </head>
-<body>
-  <h1 class="bg-amber-500">Testing</h1>
+<body class="p-0 m-0 font-[arial]">
+
+  <!-- Navbar -->
+  <div id="navbar " class="w-full min-h-[60px] h-[10vh] pt-2">
+    <div class="nav w-full min-h-[60px] h-[10vh] flex flex-row">
+      <div class="left basis-[33%] flex items-center">
+        <div class="flex flex-row pl-[50px] gap-2">
+          <img src="../asets/HeyHealth-Logo.png" alt="LOGO">
+          <h1 class="font-bold text-2xl">Hey<span class="text-orange-600">Health</span></h1>
+        </div>
+      </div>
+      <div class="right basis-[50%] flex items-center justify-center">
+        <div class="flex flex-row pr-[50px] gap-10 text-gray-900">
+          <a href="" class="text-m">Home</a>
+          <h1 class="text-m">
+            <el-dropdown class="inline-block">
+              <button class="inline-flex w-full justify-center gap-x-1.5">
+                Education
+                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
+                  <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                </svg>
+              </button>
+
+              <el-menu anchor="bottom end" popover class="w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                <div class="py-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Children's Age</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Teenage's Age</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Adult's Age</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Elderly's Age</a>
+                </div>
+              </el-menu>
+            </el-dropdown>
+          </h1>
+          <h1 class="text-m">
+            <el-dropdown class="inline-block">
+              <button class="inline-flex w-full justify-center gap-x-1.5">
+                Tools
+                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
+                  <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                </svg>
+              </button>
+
+              <el-menu anchor="bottom end" popover class="w-min-56 w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                <div class="py-1">
+                  <a class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Stress Relief</a>
+                  <a href="#" class="block ml-5 px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Breathing Exercise</a>
+                  <a href="#" class="block ml-5 px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Calming Music</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Healthy Food</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Daily Planner Recommendations</a>
+                </div>
+              </el-menu>
+            </el-dropdown>
+          </h1>
+          <a href="" class="text-m">Article</a>
+          <a href="" class="text-m">About</a>
+        </div>
+      </div>
+      <div class="right basis-[17%] flex items-center justify-end">
+        <div class="flex flex-row pr-[50px] gap-10">
+          <button class="text-m bg-orange-600 px-10 py-2 rounded-2xl text-white">
+            <a href="">Contact Us</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 </body>
 </html>
