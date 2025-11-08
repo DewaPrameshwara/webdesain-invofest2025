@@ -68,7 +68,7 @@
       <div class="right basis-[17%] flex items-center justify-end">
         <div class="flex flex-row pr-[50px] gap-10">
           <a href="">
-            <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600">
+            <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 transition-all duration-300">
             Contact Us
           </button>
           </a>
@@ -92,8 +92,8 @@
               <div class="bottom-right basis-5/7 flex">
                 <a href="">
                   <button class="group border cursor-pointer border-black py-3 px-16 rounded-full text-xl flex flex-row gap-2 hover:bg-orange-600 hover:border-orange-600 hover:text-white">
-                  Mulai <span class="text-orange-600 group-hover:text-white">Eksplorasi</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640" class="fill-black group-hover:fill-white"><path d="M480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160C96 124.7 124.7 96 160 96L480 96zM264 224C254.3 224 245.5 229.8 241.8 238.8C238.1 247.8 240.1 258.1 247 265L282 300L215 367C205.6 376.4 205.6 391.6 215 400.9L239 424.9C248.4 434.3 263.6 434.3 272.9 424.9L339.9 357.9L374.9 392.9C381.8 399.8 392.1 401.8 401.1 398.1C410.1 394.4 416 385.7 416 376L416 248C416 234.7 405.3 224 392 224L264 224z"/></svg>
+                  Mulai <span class="text-orange-600 group-hover:text-white transition-all duration-300">Eksplorasi</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160C96 124.7 124.7 96 160 96L480 96zM264 224C254.3 224 245.5 229.8 241.8 238.8C238.1 247.8 240.1 258.1 247 265L282 300L215 367C205.6 376.4 205.6 391.6 215 400.9L239 424.9C248.4 434.3 263.6 434.3 272.9 424.9L339.9 357.9L374.9 392.9C381.8 399.8 392.1 401.8 401.1 398.1C410.1 394.4 416 385.7 416 376L416 248C416 234.7 405.3 224 392 224L264 224z"/></svg>
                  </button>
                 </a>
               </div>
@@ -151,7 +151,74 @@
    </div>
 
    <!-- Navigation Section -->
-   <div id="navigation-section" class="w-full min-h-screen border border-blue-500"></div>
+   <div id="navigation-section" class="w-full min-h-screen pt-10 border border-blue-500">
+    <div class="w-full min-h-screen flex flex-col">
+      <div class="navigation-section-header">
+        <h1 class="text-5xl/20 font-bold text-center">Pilih Panduan Kesehatan <br>Berdasarkan <span class="text-orange-600">Usia</span></h1>
+      </div>
+      <div class="navigation-section-main flex flex-row flex-wrap justify-center mt-5">
+        <a href="">
+          <div class="box group min-w-[300px] w-[20vw] h-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col transition-all duration-300">
+            <div class="icon h-[30%] flex">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto group-hover:fill-white transition-all duration-300" fill="black">
+                <path d="M384 128C384 92.7 355.3 64 320 64C284.7 64 256 92.7 256 128C256 163.3 284.7 192 320 192C355.3 192 384 163.3 384 128zM280.9 233.3C257.2 224.9 236.4 209 222.1 187.5L202.6 158.2C192.8 143.5 173 139.6 158.3 149.4C143.6 159.2 139.6 179 149.4 193.8L168.9 223C187 250.1 211.7 271.4 240 285.4L240 544C240 561.7 254.3 576 272 576C289.7 576 304 561.7 304 544L304 448L336 448L336 544C336 561.7 350.3 576 368 576C385.7 576 400 561.7 400 544L400 285.6C429.1 271.4 454.4 249.4 472.7 221.4L490.9 193.5C500.5 178.7 496.3 158.9 481.5 149.2C466.7 139.5 446.9 143.7 437.2 158.6L419 186.4C397.2 219.8 360.1 240 320.2 240C307.6 240 295.3 238 283.6 234.2C282.7 233.9 281.8 233.5 280.9 233.3z"/>
+              </svg>
+            </div>
+            <div class="age block mx-auto my-3">
+              <h1 class="font-bold text-center group-hover:text-white transition-all duration-300">Masa Emas Anak</h1>
+              <p class="text-center text-gray-600 group-hover:text-white transition-all duration-300">0–12 Tahun</p>
+            </div>
+            <div class="text text-center text-sm group-hover:text-white transition-all duration-300">
+              Bantu si kecil tumbuh cerdas, kuat, dan bahagia dengan panduan-panduan penunjang tumbuh kembang anak.
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="box group min-w-[300px] w-[20vw] h-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col transition-all duration-300">
+            <div class="icon h-[30%] flex">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto group-hover:fill-white transition-all duration-300" fill="black"><path d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z"/></svg>
+            </div>
+            <div class="age block mx-auto my-3">
+              <h1 class="font-bold text-center group-hover:text-white transition-all duration-300">Remaja Hebat</h1>
+              <p class="text-center text-gray-600 group-hover:text-white transition-all duration-300">13-20 Tahun</p>
+            </div>
+            <div class="text text-center text-sm group-hover:text-white transition-all duration-300">
+              Bangun kebiasaan sehat sejak dini untuk jadi remaja kuat dan percaya diri! 
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="box group min-w-[300px] w-[20vw] h-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col transition-all duration-300">
+            <div class="icon h-[30%] flex">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto group-hover:fill-white transition-all duration-300" fill="black"><path d="M184 48C170.7 48 160 58.7 160 72C160 110.9 183.4 131.4 199.1 145.1L200.2 146.1C216.5 160.4 224 167.9 224 184C224 197.3 234.7 208 248 208C261.3 208 272 197.3 272 184C272 145.1 248.6 124.6 232.9 110.9L231.8 109.9C215.5 95.7 208 88.1 208 72C208 58.7 197.3 48 184 48zM128 256C110.3 256 96 270.3 96 288L96 480C96 533 139 576 192 576L384 576C425.8 576 461.4 549.3 474.5 512L480 512C550.7 512 608 454.7 608 384C608 313.3 550.7 256 480 256L128 256zM480 448L480 320C515.3 320 544 348.7 544 384C544 419.3 515.3 448 480 448zM320 72C320 58.7 309.3 48 296 48C282.7 48 272 58.7 272 72C272 110.9 295.4 131.4 311.1 145.1L312.2 146.1C328.5 160.4 336 167.9 336 184C336 197.3 346.7 208 360 208C373.3 208 384 197.3 384 184C384 145.1 360.6 124.6 344.9 110.9L343.8 109.9C327.5 95.7 320 88.1 320 72z"/></svg>
+            </div>
+            <div class="age block mx-auto my-3">
+              <h1 class="font-bold text-center group-hover:text-white transition-all duration-300">Dewasa Seimbang</h1>
+              <p class="text-center text-gray-600 group-hover:text-white transition-all duration-300">21-59 Tahun</p>
+            </div>
+            <div class="text text-center text-sm group-hover:text-white transition-all duration-300">
+              Seimbangkan antara karier, gaya hidup, dan kesehatanmu.
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="box group min-w-[300px] w-[20vw] h-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col transition-all duration-300">
+            <div class="icon h-[30%] flex">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto group-hover:fill-white transition-all duration-300" fill="black"><path d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
+            </div>
+            <div class="age block mx-auto my-3">
+              <h1 class="font-bold text-center group-hover:text-white transition-all duration-300">Lansia Ceria</h1>
+              <p class="text-center text-gray-600 group-hover:text-white transition-all duration-300">60+ Tahun</p>
+            </div>
+            <div class="text text-center text-sm group-hover:text-white transition-all duration-300">
+              Nikmati masa tua dengan bahagia, sehat , tetap aktif dan bugar
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+   </div>
+
    <!-- Pentingnya Kesehatan Section -->
    <div id="PK-section" class="w-full min-h-screen border border-green-500"></div>
    <!-- Self Check Section -->
