@@ -1,18 +1,20 @@
 const ctx = document.getElementById('myPieChart').getContext('2d');
 
     let pieChart = new Chart(ctx, {
-      type: 'pie',
+      type: "pie",
       data: {
-        labels: ['Selesai', 'Belum'],
-        datasets: [{
-          data: [0, 100],
-          backgroundColor: ['#22c55e', '#e5e7eb'],
-          borderWidth: 0
-        }]
+        labels: ["Selesai", "Belum"],
+        datasets: [
+          {
+            data: [0, 100],
+            backgroundColor: ["#22c55e", "#ababab"],
+            borderWidth: 0,
+          },
+        ],
       },
       options: {
-        plugins: { legend: { display: false } }
-      }
+        plugins: { legend: { display: false } },
+      },
     });
 
     const checkboxes = document.querySelectorAll('.check');
