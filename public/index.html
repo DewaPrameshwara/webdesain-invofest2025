@@ -6,8 +6,9 @@
   <title>Home | HeyHealth</title>
   <link rel="Icon" type="png" href="../asets/heyhelth-logo.svg">
   <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
-<body class="p-0 m-0 font-[arial]">
+<body class="p-0 m-0 font-[arial] overflow-x-hidden">
 
   <!-- Navbar -->
   <div id="navbar " class="w-full min-h-[60px] h-[10vh] pt-2 fixed backdrop-blur-md bg-white/30 border-b border-white/20 z-50">
@@ -220,7 +221,7 @@
    </div>
 
    <!-- Pentingnya Kesehatan Section -->
-   <div id="PK-section" class="w-full min-h-screen border border-green-500">
+   <div id="PK-section" class="w-full min-h-screen">
     <div class="w-full mih-h-screen flex flex-col">
       <div class="PK-section-header">
         <h1 class="text-5xl/20 font-bold text-center">Setiap Usia <span class="text-orange-600">Berhak</span> <br> Hidup Sehat & Bahagia </h1>
@@ -261,13 +262,13 @@
    </div>
 
    <!-- Self Check Section -->
-   <div id="selfCheck-section" class="w-full min-h-screen pt-10 border border-yellow-500">
+   <div id="selfCheck-section" class="w-full min-h-screen pt-10">
     <div class="w-full min-h-screen flex flex-col">
       <div class="selfCheck-section-header">
         <h1 class="text-5xl/20 font-bold text-center">Cek <span class="text-orange-600">Kesehatan</span> Anda</h1>
       </div>
       <div class="selfCheck-section-main flex flex-row justify-evenly p-5">
-        <div class="left basis-4/7 border border-amber-400 p-10">
+        <div class="left basis-4/7 p-10">
           <form action="" class="flex flex-col gap-5">
             <div class="flex flex-row items-center">
               <input type="checkbox" id="hidrasi" name="hidrasi" value="yes" class="check peer w-6 h-6 accent-green-600 cursor-pointer">
@@ -313,7 +314,7 @@
             </div>
           </form>
         </div>
-        <div class="right basis-2/7 border border-red-400 flex flex-col justify-center items-center">
+        <div class="right basis-2/7 flex flex-col justify-center items-center">
           <canvas id="myPieChart"></canvas>
           <div class="popup absolute bg-orange-600 p-5 rounded-xl hidden animate-ping">
             <h1 id="statusText" class="text-white">Centang kegiatan untuk mulai!</h1>
@@ -323,10 +324,180 @@
     </div>
    </div>
    
-   <!-- Ajakan Section -->
-   <div id="ajakan-section" class="w-full min-h-screen pt-10 border border-black"></div>
    <!-- Contact Section -->
-   <div id="contact-section" class="w-full min-h-screen pt-10 border border-sky-950"></div>
+   <div id="contact-section" class="w-full min-h-screen">
+    <div class="w-full min-h-screen flex flex-row justify-evenly px-10 py-20">
+      <div class="left basis-2/5 flex flex-col gap-5  justify-center">
+        <p class="text-gray-900 text-md font-semibold">Gunakan HeyHealth sebagai panduan gaya hidup sehatmu! Dapatkan edukasi, tips, dan artikel-artikel untuk menjaga kesehatan setiap hari.</p>
+        <h1 class="text-5xl font-bold uppercase text-blue-600 tracking-wide leading-normal">Hubungi Kami <br>Sekarang</h1>
+        <p class="text-gray-900 text-md font-semibold">Konsultasikan kesehatanmu sekarang juga!</p>
+        <a href="">
+          <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-linear-to-r from-blue-600 to-blue-200 cursor-pointer hover:scale-105 hover:from-white hover:to-white transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 group-hover:fill-blue-600" viewBox="0 0 640 640" fill="white"><path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg>
+            <h1 class="text-xl font-bold text-white group-hover:text-blue-600">WhatsApp</h1>
+          </button>
+        </a>
+      </div>
+      <div class="right basis-2/5 flex justify-center items-center">
+        <img src="../asets/contact-us.png" alt="Contact Us" loading="lazy">
+      </div>
+    </div>
+   </div>
+   
+   <!-- Form Section -->
+   <div id="form-section" class="w-full min-h-screen border border-black bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../asets/bg-form.png)]">
+    <div class="w-full min-h-screen flex flex-row">
+      <div class="left basis-1/2 border border-amber-600 flex justify-center items-center">
+        <div class="box-form w-[80%] min-h-10 h-fit bg-sky-800 rounded-2xl p-10">
+           <h3 class="text-sm mb-2 font-medium text-white">SMA Negeri 3 Denpasar</h3>
+           <h1 class="text-3xl font-semibold mb-6 text-white">How May We Help You !</h1>
+           <form class="flex flex-col gap-5 text-white">
+              <div class="flex flex-col md:flex-row gap-5">
+                <div class="flex-1">
+                  <label for="namaDepan" class="block text-sm mb-1">Nama Depan</label>
+                  <input id="namaDepan" type="text" placeholder="Nama Depan"
+                    class="w-full px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+                </div>
+                <div class="flex-1">
+                  <label for="namaBelakang" class="block text-sm mb-1">Nama Belakang</label>
+                  <input id="namaBelakang" type="text" placeholder="Nama Belakang"
+                    class="w-full px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+                </div>
+              </div>
+              <div>
+                <label for="layanan" class="block text-sm mb-1">Layanan</label>
+                <input id="layanan" type="text" placeholder="Layanan"
+                  class="w-full px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+              </div>
+              <div>
+                <label for="keterangan" class="block text-sm mb-1">Keterangan</label>
+                <textarea id="keterangan" rows="3" placeholder="Keterangan"
+                  class="w-full px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+              </div>
+              <button type="submit"
+                class="w-[60%] mx-auto border border-white bg-white text-blue-800 font-semibold py-2 mt-5 rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:scale-105 hover:bg-sky-800 hover:text-white">
+                Kirim
+              </button>
+            </form>
+        </div>
+      </div>
+      <div class="right basis-1/2 max-w-[50vw] border border-blue-600 flex flex-col justify-center px-10">
+        <h1 class="text-3xl font-semibold mb-4 text-white">What They Said About Us</h1>
+        <h3 class="text-l text-shadow-xl mb-2 font-medium text-white">Kami percaya setiap langkah kecil menuju hidup sehat dimulai dari kesadaran. Lihat bagaimana HeyHealt membantu banyak orang mencapainya.</h3>
+        <div class="swiper comments max-w-[80%]">
+          <div class="swiper-wrapper flex mb-5">
+            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
+              <div class="top flex flex-row">
+                <div class="profile basis-1/5 flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                </div>
+                <div class="name basis-4/5 ms-5">
+                  <h1 class="text-gray-900 font-bold text-xl">Angel Keyres</h1>
+                  <p class="text-gray-600 italic text-sm">Co-Founder AMD</p>
+                  <div class="stars flex flex-row gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#ababab" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom py-2">
+                <p>“HeyHealt membantu saya memahami kondisi tubuh saya dengan cara yang sederhana namun akurat. Sangat berguna untuk menjaga kesehatan sehari-hari.”</p>
+              </div>
+            </div>
+            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
+              <div class="top flex flex-row">
+                <div class="profile basis-1/5 flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                </div>
+                <div class="name basis-4/5 ms-5">
+                  <h1 class="text-gray-900 font-bold text-xl">Laras Dewi</h1>
+                  <p class="text-gray-600 italic text-sm">Mahasiswi Kedokteran</p>
+                  <div class="stars flex flex-row gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom py-2">
+                <p>“Sebagai calon tenaga medis, saya terkesan dengan bagaimana HeyHealt mengedukasi pengguna tentang gaya hidup sehat tanpa terasa membosankan.”</p>
+              </div>
+            </div>
+            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
+              <div class="top flex flex-row">
+                <div class="profile basis-1/5 flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                </div>
+                <div class="name basis-4/5 ms-5">
+                  <h1 class="text-gray-900 font-bold text-xl">Rafi Nugraha</h1>
+                  <p class="text-gray-600 italic text-sm">Pegiat Kesehatan Digital</p>
+                  <div class="stars flex flex-row gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom py-2">
+                <p>“Desainnya menarik, mudah digunakan, dan fiturnya informatif. Cocok untuk masyarakat yang ingin mulai memperhatikan kesehatannya.”</p>
+              </div>
+            </div>
+            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
+              <div class="top flex flex-row">
+                <div class="profile basis-1/5 flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                </div>
+                <div class="name basis-4/5 ms-5">
+                  <h1 class="text-gray-900 font-bold text-xl">Jonathan Lee</h1>
+                  <p class="text-gray-600 italic text-sm">Entrepreneur</p>
+                  <div class="stars flex flex-row gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#ababab" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom py-2">
+                <p>“Saya suka pendekatan personal HeyHealt terhadap kesehatan. Memberikan insight yang praktis dan bisa langsung diterapkan.”</p>
+              </div>
+            </div>
+            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
+              <div class="top flex flex-row">
+                <div class="profile basis-1/5 flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                </div>
+                <div class="name basis-4/5 ms-5">
+                  <h1 class="text-gray-900 font-bold text-xl">Clara Wijaya</h1>
+                  <p class="text-gray-600 italic text-sm">Ibu Rumah Tangga</p>
+                  <div class="stars flex flex-row gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom py-2">
+                <p>“HeyHealt membuat saya lebih sadar pentingnya rutinitas sehat untuk keluarga. Aplikasinya ringan dan sangat membantu!”</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+   </div>
+
    <!-- FAQ Section -->
    <div id="faq-section" class="w-full min-h-screen pt-10 border border-amber-950"></div>
 
@@ -381,6 +552,8 @@
 
  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
  <script src="../script/selfCheck.js" type="module"></script>
+ <script src="../script/swiperSlider.js" tyoe="module"></script>
 </body>
 </html>

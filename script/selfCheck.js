@@ -19,28 +19,30 @@ const ctx = document.getElementById('myPieChart').getContext('2d');
     const statusText = document.getElementById('statusText');
     const popup = document.querySelector('.popup')
 
-    const messages = [
-      "Belum mulai 😅",
-      "Langkah awal yang baik 👍",
-      "Semakin sehat nih 💪",
-      "Kesehatan makin terjaga 🌿",
-      "Hampir sempurna! 😍",
-      "Anda sudah sehat 🌟"
-    ];
+    const messagesUp = ["Belum mulai 😅", "Langkah awal yang baik 👍", "Semakin sehat nih 💪", "Kesehatan makin terjaga 🌿", "Hampir sempurna! 😍", "Anda sudah sehat 🌟"];
 
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', updateChart);
+    const messagesDown = ["Ayo mulai lagi 💪", "Jangan menyerah 🌱", "Masih bisa diperbaiki 😊", "Sedikit lagi semangat! 🔁", "Tetaplah termotivasi😅"];
+
+    checkboxes.forEach((cb) => {
+      cb.addEventListener("change", updateChart);
     });
 
+    let lastCheckCount;
+    let checkedCount;
     function updateChart() {
-      const checkedCount = document.querySelectorAll('.check:checked').length;
+      checkedCount = document.querySelectorAll(".check:checked").length;
       const percentage = (checkedCount / checkboxes.length) * 100;
 
       pieChart.data.datasets[0].data = [percentage, 100 - percentage];
       pieChart.update();
-      
-      statusText.textContent = messages[checkedCount];
-      pupupAnimation()
+
+      if (checkedCount >= lastCheckCount) {
+        statusText.textContent = messagesUp[checkedCount];
+      } else {
+        statusText.textContent = messagesDown[checkedCount];
+      }
+      lastCheckCount = checkedCount;
+      pupupAnimation();
     }
     
     function pupupAnimation() {
