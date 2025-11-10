@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Article | HeyHealth</title>
+  <title>About Us | HeyHealth</title>
   <link rel="Icon" type="png" href="../asets/heyhelth-logo.svg">
   <link rel="stylesheet" href="../src/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 
 <body class="p-0 m-0 font-[arial] overflow-x-hidden">
@@ -15,37 +16,46 @@
   </svg>
 
   <!-- Navbar -->
-  <div id="navbar" class="w-full min-h-[60px] h-[10vh] pt-2 fixed z-50">
-    <div class="nav w-full min-h-[60px] h-[10vh] pl-[50px] flex flex-row">
-      <div class="left basis-[33%] flex items-center">
-        <a href="./index.html" class="flex flex-row items-center gap-2">
-          <img src="../asets/heyhelth-logo.svg" alt="LOGO" width="10%">
-          <h1 class="font-bold text-2xl">Hey<span class="text-orange-600">Health</span></h1>
-        </a>
-      </div>
-      <div class="right basis-[50%] flex items-center justify-center">
-        <div class="flex flex-row pr-[50px] gap-10 text-gray-900">
-          <a href="./index.html" class="text-m hover:text-orange-600">Home</a>
-          <h1 class="text-m">
-            <el-dropdown class="inline-block">
-              <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
-                Education
-                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
-                  <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-                </svg>
-              </button>
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="./index.html" class="md:basis-[33%] flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="../asets/heyhelth-logo.svg" class="h-8" alt="HeyHealth Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap">Hey<span class="text-orange-600">Health</span></span>
+      </a>
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-600 hover:text-white focus:outline-none focus:text-orange-600 focus:ring-2 focus:ring-orange-600" aria-controls="navbar-dropdown" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="md:basis-[50%] hidden w-full md:block md:justify-items-center justify-items-end" id="navbar-dropdown">
+        <ul class="absolute md:flex md:bg-transparent bg-white flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+          <li>
+            <a href="./index.html" class="block py-2 px-3 rounded-sm md:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Home</a>
+          </li>
+          <li>
+              <h1 class="text-m block py-2 px-3 rounded-sm md:p-0">
+                <el-dropdown class="inline-block">
+                  <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
+                    Education
+                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
+                      <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
+                  </button>
 
-              <el-menu anchor="bottom end" popover class="w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                <div class="py-1">
-                  <a href="./edu-child.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Children's Age</a>
-                  <a href="./edu-teen.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Teenage's Age</a>
-                  <a href="./edu-adult.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Adult's Age</a>
-                  <a href="./edu-elderly.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Elderly's Age</a>
-                </div>
-              </el-menu>
-            </el-dropdown>
-          </h1>
-          <h1 class="text-m">
+                  <el-menu anchor="bottom end" popover class="w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                    <div class="py-1">
+                      <a href="./edu-child.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Children's Age</a>
+                      <a href="./edu-teen.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Teenage's Age</a>
+                      <a href="./edu-adult.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Adult's Age</a>
+                      <a href="./edu-elderly.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Elderly's Age</a>
+                    </div>
+                  </el-menu>
+                </el-dropdown>
+              </h1>
+          </li>
+          <li>
+            <h1 class="text-m block py-2 px-3 rounded-sm md:p-0">
             <el-dropdown class="inline-block">
               <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
                 Tools
@@ -66,21 +76,36 @@
               </el-menu>
             </el-dropdown>
           </h1>
-          <a href="./article.html" class="text-m hover:text-orange-600">Article</a>
-          <a href="./about-us.html" class="text-m text-orange-600">About Us</a>
-        </div>
+          <li>
+            <a href="./article.html" class="block py-2 px-3 rounded-sm md:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Article</a>
+          </li>
+          <li>
+            <a href="./about-us.html" class="block py-2 px-3 rounded-sm md:p-0 text-orange-600" aria-current="page">About Us</a>
+          </li>
+          <li>
+            <div class="flex md:hidden items-center justify-end">
+              <div class="flex flex-row pr-[50px] gap-10">
+                <a href="./index.html#contact-section">
+                  <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
+                  Contact Us
+                  </button>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="right basis-[17%] flex items-center justify-end">
+      <div class="basis-[17%] hidden md:flex items-center justify-end">
         <div class="flex flex-row pr-[50px] gap-10">
           <a href="./index.html#contact-section">
             <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
             Contact Us
-          </button>
+            </button>
           </a>
         </div>
       </div>
     </div>
-  </div>
+  </nav>
 
   <!-- Home Section -->
    <div id="home-section" class="w-full min-h-screen border border-transparent">
@@ -394,7 +419,7 @@
     <div class="foot w-full min-h-[60px] pl-[50px] bg-sky-100 flex flex-row px-5 py-10">
       <div class="left basis-[35%]">
         <div class="flex flex-row gap-2 items-center">
-          <img src="../asets/heyhelth-logo.svg" alt="LOGO" width="10%">
+          <img class="w-[10%] min-w-10" src="../asets/heyhelth-logo.svg" alt="LOGO">
           <h1 class="font-bold text-2xl">Hey<span class="text-orange-600">Health</span></h1>
         </div>
         <p class=" mt-3">Sapaan hangat untuk kesehatanmu di masa depan. Hey<span class="text-orange-600">Health</span> siap menemani perjalananmu.</p>
@@ -444,6 +469,7 @@
    </a>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script><script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   <script src="../script/swiperSlider.js" tyoe="module"></script>
   <script src="../script/main.js"></script>
 </body>
