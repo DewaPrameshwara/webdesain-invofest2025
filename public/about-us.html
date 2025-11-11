@@ -108,16 +108,19 @@
   </nav>
 
   <!-- Home Section -->
-   <div id="home-section" class="w-full min-h-screen border border-transparent">
-    <div class="w-full min-h-screen mt-[10vh] flex flex-col">
+   <div id="home-section" class="w-full border border-transparent">
+    <div class="w-full mt-[10vh] flex flex-col">
       <div class="flex flex-row justify-center items-center pl-[50px] pt-20 gap-5  bg-[url(../asets/about-us2.png)] bg-no-repeat">
         <div class="left basis-[40%]">
           <div class="flex flex-col">
             <h1 class="text-6xl/20 font-bold ">Tentang <br> Hey<span class="text-orange-600">Health</span></h1>
             <p class="mt-8 text-gray-900 text-xl">HeyHealth membantu setiap usia memahami dan menjaga kesehatannya melalui panduan dan tools digital.</p>
           </div>
+          <div class="right basis-[45%] mt-7 flex md:hidden">
+            <img class="w-[90%]" src="../asets/about-us.png" alt="IMAGE" loading="lazy">
+          </div>
         </div>
-        <div class="right basis-[45%] flex items-start justify-center">
+        <div class="right basis-[45%] hidden md:flex items-start justify-center">
           <img class="w-[90%]" src="../asets/about-us.png" alt="IMAGE" loading="lazy">
         </div>
       </div>
@@ -129,7 +132,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#dff2fe" fill-opacity="1" d="M0,32L24,74.7C48,117,96,203,144,224C192,245,240,203,288,197.3C336,192,384,224,432,218.7C480,213,528,171,576,138.7C624,107,672,85,720,80C768,75,816,85,864,101.3C912,117,960,139,1008,170.7C1056,203,1104,245,1152,256C1200,267,1248,245,1296,229.3C1344,213,1392,203,1416,197.3L1440,192L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path>
     </svg>
-    <div class="w-full flex flex-row justify-center items-center gap-10 px-10 bg-sky-100">
+    <div class="w-full grid grid-cols-1 grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 justify-center items-center gap-10 px-10 bg-sky-100">
       <div class="left basis-1/4 text-justify flex flex-col py-3 px-5">
         <div class="top flex flex-row items-center">
           <div class="profile basis-1/5 flex">
@@ -178,7 +181,7 @@
   <!-- Platform Section -->
    <div id="platform-section" class="w-full">
     <div class="w-full flex flex-col">
-      <div class="basis-[80%] flex flex-row justify-evenly pl-[50px] pt-20">
+      <div class="basis-[80%] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 justify-evenly pl-[50px] pt-20">
         <div class="left basis-[40%] flex items-start justify-center">
           <img src="../asets/logo-big.png" alt="IMAGE" loading="lazy">
         </div>
@@ -188,16 +191,16 @@
           </div>
         </div>
       </div>
-      <div class="basis-[20%] flex justify-center">
-        <p class="w-[50%] text-center text-gray-700 text-xl">Hey<span class="text-orange-600">Health</span> berawal dari sebuah ide sederhana: bagaimana jika kesehatan bisa dibicarakan dengan cara yang lebih hangat dan bersahabat?</p>
+      <div class="basis-[20%] flex justify-center my-10">
+        <p class="max-w-[600px] px-5 text-center text-gray-700 text-xl">Hey<span class="text-orange-600">Health</span> berawal dari sebuah ide sederhana: bagaimana jika kesehatan bisa dibicarakan dengan cara yang lebih hangat dan bersahabat?</p>
       </div>
     </div>
    </div>
 
    <!-- Form Section -->
-   <div id="form-section" class="w-full min-h-screen bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../asets/bg-form.png)] my-20">
-    <div class="w-full min-h-screen flex flex-row">
-      <div class="left basis-1/2 flex justify-center items-center">
+   <div id="form-section" class="w-full min-h-screen bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../asets/bg-form.png)] bg-no-repeat bg-cover">
+    <div class="w-full min-h-screen grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2">
+      <div class="left flex justify-center items-center mt-10">
         <div class="box-form w-[80%] min-h-10 h-fit bg-sky-800 rounded-2xl p-10">
            <h3 class="text-sm mb-2 font-medium text-white">SMA Negeri 3 Denpasar</h3>
            <h1 class="text-3xl font-semibold mb-6 text-white">How May We Help You !</h1>
@@ -231,59 +234,59 @@
             </form>
         </div>
       </div>
-      <div class="right basis-1/2 max-w-[50vw] flex flex-col justify-center px-10">
+      <div class="right max-w-[650px] flex flex-col justify-center px-10 my-20 md:-0">
         <h1 class="text-3xl font-semibold mb-4 text-white">What They Said About Us</h1>
         <h3 class="text-l text-shadow-xl mb-2 font-medium text-white">Kami percaya setiap langkah kecil menuju hidup sehat dimulai dari kesadaran. Lihat bagaimana HeyHealt membantu banyak orang mencapainya.</h3>
-        <div class="swiper comments max-w-[80%]">
+        <div class="swiper comments w-full md:max-w-[90%] lg:max-w-[80%] mx-auto">
           <div class="swiper-wrapper flex mb-5">
-            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
-              <div class="top flex flex-row">
-                <div class="profile basis-1/5 flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
-                </div>
-                <div class="name basis-4/5 ms-5">
-                  <h1 class="text-gray-900 font-bold text-xl">Angel Keyres</h1>
-                  <p class="text-gray-600 italic text-sm">Co-Founder AMD</p>
-                  <div class="stars flex flex-row gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#ababab" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+              <div class="swiper-slide comment flex flex-col bg-white py-4 px-5 min-w-[300px] max-w-full sm:max-w-[486px] rounded-3xl shadow-lg">
+                  <div class="top flex flex-row items-center">
+                      <div class="profile basis-1/5 shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-[75px] sm:h-[75px] text-gray-500" viewBox="0 0 640 640"><path fill="currentColor" d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                      </div>                      
+                      <div class="name basis-4/5 ml-4 sm:ml-5 grow">
+                        <h1 class="text-gray-900 font-bold text-lg sm:text-xl">Angel Keyres</h1>
+                        <p class="text-gray-600 italic text-xs sm:text-sm">Co-Founder AMD</p>
+                        <div class="stars flex flex-row gap-1 sm:gap-2 mt-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#ababab" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                        </div>
+                      </div>
                   </div>
-                </div>
-              </div>
-              <div class="bottom py-2">
-                <p>“HeyHealt membantu saya memahami kondisi tubuh saya dengan cara yang sederhana namun akurat. Sangat berguna untuk menjaga kesehatan sehari-hari.”</p>
-              </div>
-            </div>
-            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
-              <div class="top flex flex-row">
-                <div class="profile basis-1/5 flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
-                </div>
-                <div class="name basis-4/5 ms-5">
-                  <h1 class="text-gray-900 font-bold text-xl">Laras Dewi</h1>
-                  <p class="text-gray-600 italic text-sm">Mahasiswi Kedokteran</p>
-                  <div class="stars flex flex-row gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                  <div class="bottom py-2 mt-2">
+                    <p class="text-gray-700 text-sm sm:text-base">“HeyHealt membantu saya memahami kondisi tubuh saya dengan cara yang sederhana namun akurat. Sangat berguna untuk menjaga kesehatan sehari-hari.”</p>
                   </div>
-                </div>
               </div>
-              <div class="bottom py-2">
-                <p>“Sebagai calon tenaga medis, saya terkesan dengan bagaimana HeyHealt mengedukasi pengguna tentang gaya hidup sehat tanpa terasa membosankan.”</p>
+              <div class="swiper-slide comment flex flex-col bg-white py-4 px-5 min-w-[300px] max-w-full sm:max-w-[486px] rounded-3xl shadow-lg">
+                  <div class="top flex flex-row items-center">
+                      <div class="profile basis-1/5 shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-[75px] sm:h-[75px] text-gray-500" viewBox="0 0 640 640"><path fill="currentColor" d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                      </div>
+                      <div class="name basis-4/5 ml-4 sm:ml-5 grow">
+                          <h1 class="text-gray-900 font-bold text-lg sm:text-xl">Laras Dewi</h1>
+                          <p class="text-gray-600 italic text-xs sm:text-sm">Mahasiswi Kedokteran</p>
+                          <div class="stars flex flex-row gap-1 sm:gap-2 mt-1">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 sm:w-5" viewBox="0 0 640 640"><path fill="#FFD43B" d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"/></svg>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="bottom py-2 mt-2">
+                      <p class="text-gray-700 text-sm sm:text-base">“Sebagai calon tenaga medis, saya terkesan dengan bagaimana HeyHealt mengedukasi pengguna tentang gaya hidup sehat tanpa terasa membosankan.”</p>
+                  </div>
               </div>
-            </div>
-            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
-              <div class="top flex flex-row">
-                <div class="profile basis-1/5 flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
-                </div>
-                <div class="name basis-4/5 ms-5">
+            <div class="swiper-slide comment flex flex-col bg-white py-4 px-5 min-w-[300px] max-w-full sm:max-w-[486px] rounded-3xl shadow-lg">
+                  <div class="top flex flex-row items-center">
+                      <div class="profile basis-1/5 shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-[75px] sm:h-[75px] text-gray-500" viewBox="0 0 640 640"><path fill="currentColor" d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                      </div>
+                      <div class="name basis-4/5 ml-4 sm:ml-5 grow">
                   <h1 class="text-gray-900 font-bold text-xl">Rafi Nugraha</h1>
                   <p class="text-gray-600 italic text-sm">Pegiat Kesehatan Digital</p>
                   <div class="stars flex flex-row gap-2">
@@ -299,12 +302,12 @@
                 <p>“Desainnya menarik, mudah digunakan, dan fiturnya informatif. Cocok untuk masyarakat yang ingin mulai memperhatikan kesehatannya.”</p>
               </div>
             </div>
-            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
-              <div class="top flex flex-row">
-                <div class="profile basis-1/5 flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
-                </div>
-                <div class="name basis-4/5 ms-5">
+            <div class="swiper-slide comment flex flex-col bg-white py-4 px-5 min-w-[300px] max-w-full sm:max-w-[486px] rounded-3xl shadow-lg">
+                  <div class="top flex flex-row items-center">
+                      <div class="profile basis-1/5 shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-[75px] sm:h-[75px] text-gray-500" viewBox="0 0 640 640"><path fill="currentColor" d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                      </div>
+                      <div class="name basis-4/5 ml-4 sm:ml-5 grow">
                   <h1 class="text-gray-900 font-bold text-xl">Jonathan Lee</h1>
                   <p class="text-gray-600 italic text-sm">Entrepreneur</p>
                   <div class="stars flex flex-row gap-2">
@@ -320,12 +323,12 @@
                 <p>“Saya suka pendekatan personal HeyHealt terhadap kesehatan. Memberikan insight yang praktis dan bisa langsung diterapkan.”</p>
               </div>
             </div>
-            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
-              <div class="top flex flex-row">
-                <div class="profile basis-1/5 flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
-                </div>
-                <div class="name basis-4/5 ms-5">
+            <div class="swiper-slide comment flex flex-col bg-white py-4 px-5 min-w-[300px] max-w-full sm:max-w-[486px] rounded-3xl shadow-lg">
+                  <div class="top flex flex-row items-center">
+                      <div class="profile basis-1/5 shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-[75px] sm:h-[75px] text-gray-500" viewBox="0 0 640 640"><path fill="currentColor" d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                      </div>
+                      <div class="name basis-4/5 ml-4 sm:ml-5 grow">
                   <h1 class="text-gray-900 font-bold text-xl">John Clear</h1>
                   <p class="text-gray-600 italic text-sm">Nutritionist</p>
                   <div class="stars flex flex-row gap-2">
@@ -341,12 +344,12 @@
                 <p>“Saya merasa HeyHealt membantu pasien saya lebih memahami gaya hidup sehat. Informasinya mudah dipahami dan aplikatif.”</p>
               </div>
             </div>
-            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
-              <div class="top flex flex-row">
-                <div class="profile basis-1/5 flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
-                </div>
-                <div class="name basis-4/5 ms-5">
+            <div class="swiper-slide comment flex flex-col bg-white py-4 px-5 min-w-[300px] max-w-full sm:max-w-[486px] rounded-3xl shadow-lg">
+                  <div class="top flex flex-row items-center">
+                      <div class="profile basis-1/5 shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-[75px] sm:h-[75px] text-gray-500" viewBox="0 0 640 640"><path fill="currentColor" d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                      </div>
+                      <div class="name basis-4/5 ml-4 sm:ml-5 grow">
                   <h1 class="text-gray-900 font-bold text-xl">Riko Santoso</h1>
                   <p class="text-gray-600 italic text-sm">Fitness Coach</p>
                   <div class="stars flex flex-row gap-2">
@@ -362,12 +365,12 @@
                 <p>“Platform ini luar biasa! Tips kesehatannya realistis dan membuat klien saya lebih konsisten menjaga pola makan dan olahraga.”</p>
               </div>
             </div>
-            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
-              <div class="top flex flex-row">
-                <div class="profile basis-1/5 flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
-                </div>
-                <div class="name basis-4/5 ms-5">
+            <div class="swiper-slide comment flex flex-col bg-white py-4 px-5 min-w-[300px] max-w-full sm:max-w-[486px] rounded-3xl shadow-lg">
+                  <div class="top flex flex-row items-center">
+                      <div class="profile basis-1/5 shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-[75px] sm:h-[75px] text-gray-500" viewBox="0 0 640 640"><path fill="currentColor" d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                      </div>
+                      <div class="name basis-4/5 ml-4 sm:ml-5 grow">
                   <h1 class="text-gray-900 font-bold text-xl">Maya Putri</h1>
                   <p class="text-gray-600 italic text-sm">Blogger Kesehatan</p>
                   <div class="stars flex flex-row gap-2">
@@ -383,12 +386,12 @@
                 <p>“HeyHealt memudahkan saya untuk memantau kesehatan sehari-hari. Sederhana tapi cukup akurat untuk kebutuhan pribadi.”</p>
               </div>
             </div>
-            <div class="swiper-slide comment flex flex-col bg-white py-3 px-5 min-w-[300px] max-w-[486px] rounded-3xl">
-              <div class="top flex flex-row">
-                <div class="profile basis-1/5 flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-[75px] h-[75px]" viewBox="0 0 640 640"><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
-                </div>
-                <div class="name basis-4/5 ms-5">
+            <div class="swiper-slide comment flex flex-col bg-white py-4 px-5 min-w-[300px] max-w-full sm:max-w-[486px] rounded-3xl shadow-lg">
+                  <div class="top flex flex-row items-center">
+                      <div class="profile basis-1/5 shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 sm:w-[75px] sm:h-[75px] text-gray-500" viewBox="0 0 640 640"><path fill="currentColor" d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+                      </div>
+                      <div class="name basis-4/5 ml-4 sm:ml-5 grow">
                   <h1 class="text-gray-900 font-bold text-xl">Clara Wijaya</h1>
                   <p class="text-gray-600 italic text-sm">Ibu Rumah Tangga</p>
                   <div class="stars flex flex-row gap-2">
@@ -403,10 +406,10 @@
               <div class="bottom py-2">
                 <p>“HeyHealt membuat saya lebih sadar pentingnya rutinitas sehat untuk keluarga. Aplikasinya ringan dan sangat membantu!”</p>
               </div>
-            </div>
+            </div>              
           </div>
           <div class="swiper-pagination"></div>
-        </div>
+      </div>
       </div>
     </div>
    </div>
@@ -416,7 +419,7 @@
     <svg class="rotate-180 fill-sky-100" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
     </svg>
-    <div class="foot w-full min-h-[60px] pl-[50px] bg-sky-100 flex flex-row px-5 py-10">
+    <div class="foot w-full min-h-[60px] pl-[50px] bg-sky-100 grid grid-rows-3 grid-cols-1 md:grid-rows-1 md:grid-cols-3 px-5 py-10">
       <div class="left basis-[35%]">
         <div class="flex flex-row gap-2 items-center">
           <img class="w-[10%] min-w-10" src="../asets/heyhelth-logo.svg" alt="LOGO">
@@ -432,7 +435,7 @@
           <svg class="fill-black hover:fill-gray-600" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640"><path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/></svg>
         </div>
       </div>
-      <div class="mid basis-[35%] flex flex-row">
+      <div class="mid basis-[35%] flex flex-row my-10">
         <div class="mid-left basis-[50%] flex flex-col gap-y-10 ml-10">
           <div class="contact flex flex-col gap-2">
             <h1 class="font-bold">Kontak Kami</h1>
