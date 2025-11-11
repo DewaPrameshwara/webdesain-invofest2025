@@ -17,24 +17,24 @@
 
   <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 w-full z-50">
-    <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="./index.html" class="md:basis-[33%] flex items-center space-x-3 rtl:space-x-reverse">
+    <div class="max-w-7xl flex flex-wrap lg:flex-nowrap items-center justify-between mx-auto p-4">
+      <a href="./index.html" class="lg:basis-[33%] flex items-center space-x-3 rtl:space-x-reverse">
           <img src="../asets/heyhelth-logo.svg" class="h-8" alt="HeyHealth Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap">Hey<span class="text-orange-600">Health</span></span>
       </a>
-      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-600 hover:text-white focus:outline-none focus:text-orange-600 focus:ring-2 focus:ring-orange-600" aria-controls="navbar-dropdown" aria-expanded="false">
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-orange-600 hover:text-white focus:outline-none focus:text-orange-600 focus:ring-2 focus:ring-orange-600" aria-controls="navbar-dropdown" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
       </button>
-      <div class="md:basis-[50%] hidden w-full md:block md:justify-items-center justify-items-end" id="navbar-dropdown">
-        <ul class="absolute md:flex md:bg-transparent bg-white flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+      <div class="absolute right-5 lg:static hidden w-fit lg:block lg:justify-items-center justify-items-end" id="navbar-dropdown">
+        <ul class="absolute lg:static lg:flex lg:bg-transparent bg-white flex-col font-medium p-4 lg:p-0 mt-4 border rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0">
           <li>
-            <a href="./index.html" class="block py-2 px-3 rounded-sm md:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Home</a>
+            <a href="./index.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Home</a>
           </li>
           <li>
-              <h1 class="text-m block py-2 px-3 rounded-sm md:p-0">
+              <h1 class="text-m block py-2 px-3 rounded-sm lg:p-0">
                 <el-dropdown class="inline-block">
                   <button class="inline-flex w-full justify-center gap-x-1.5 text-orange-600">
                     Education
@@ -55,7 +55,7 @@
               </h1>
           </li>
           <li>
-            <h1 class="text-m block py-2 px-3 rounded-sm md:p-0">
+            <h1 class="text-m block py-2 px-3 rounded-sm lg:p-0">
             <el-dropdown class="inline-block">
               <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
                 Tools
@@ -77,14 +77,14 @@
             </el-dropdown>
           </h1>
           <li>
-            <a href="./article.html" class="block py-2 px-3 rounded-sm md:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Article</a>
+            <a href="./article.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Article</a>
           </li>
           <li>
-            <a href="./about-us.html" class="block py-2 px-3 rounded-sm md:p-0 text-gray-900 hover:text-orange-600" aria-current="page">About Us</a>
+            <a href="./about-us.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">About Us</a>
           </li>
           <li>
-            <div class="flex md:hidden items-center justify-end">
-              <div class="flex flex-row pr-[50px] gap-10">
+            <div class="flex lg:hidden items-center justify-end">
+              <div class="flex flex-row gap-10">
                 <a href="./index.html#contact-section">
                   <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
                   Contact Us
@@ -95,7 +95,7 @@
           </li>
         </ul>
       </div>
-      <div class="basis-[17%] hidden md:flex items-center justify-end">
+      <div class=" hidden lg:flex items-center justify-end">
         <div class="flex flex-row pr-[50px] gap-10">
           <a href="./index.html#contact-section">
             <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
@@ -108,8 +108,8 @@
   </nav>
 
    <!-- Home Section -->
-   <div id="home-section" class="w-full h-screen border border-transparent">
-    <div class="w-full h-screen mt-[10vh] flex flex-col">
+   <div id="home-section" class="w-full min-h-screen border border-transparent">
+    <div class="w-full min-h-screen mt-[10vh] flex flex-col">
       <div class="basis-[80vh] flex flex-row justify-end pl-[50px] pt-10">
         <div class="left w-fit">
           <div class="flex flex-col mt-[50px]">
@@ -127,9 +127,9 @@
       </div>
       <div class="basis-[20vh] home-section-navigation flex flex-row flex-wrap justify-center">
         <a href="./edu-child.html">
-          <div class="group min-w-[300px] w-[20vw] h-[20vw] bg-linear-to-br from-green-400 to-green-700 rounded-3xl p-5 ms-5 my-5 flex flex-col -translate-y-2 scale-105 shadow-xl">
+          <div class="group min-w-[300px] w-[20vw] h-[20vw] bg-gradient-to-br from-green-400 to-green-700 rounded-3xl p-5 ms-5 my-5 flex flex-col -translate-y-2 scale-105 shadow-xl">
             <div class="icon h-[30%] flex">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto fill-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto fill-white">
                 <path d="M384 128C384 92.7 355.3 64 320 64C284.7 64 256 92.7 256 128C256 163.3 284.7 192 320 192C355.3 192 384 163.3 384 128zM280.9 233.3C257.2 224.9 236.4 209 222.1 187.5L202.6 158.2C192.8 143.5 173 139.6 158.3 149.4C143.6 159.2 139.6 179 149.4 193.8L168.9 223C187 250.1 211.7 271.4 240 285.4L240 544C240 561.7 254.3 576 272 576C289.7 576 304 561.7 304 544L304 448L336 448L336 544C336 561.7 350.3 576 368 576C385.7 576 400 561.7 400 544L400 285.6C429.1 271.4 454.4 249.4 472.7 221.4L490.9 193.5C500.5 178.7 496.3 158.9 481.5 149.2C466.7 139.5 446.9 143.7 437.2 158.6L419 186.4C397.2 219.8 360.1 240 320.2 240C307.6 240 295.3 238 283.6 234.2C282.7 233.9 281.8 233.5 280.9 233.3z"/>
               </svg>
             </div>
@@ -189,9 +189,75 @@
    </div>
 
    <!-- Navigation Section -->
-   <div id="navigation-section" class="w-full min-h-screen pt-10">
-    <div class="w-full min-h-screen flex flex-col">
-      
+   <div id="navigation-section" class="w-full min-h-screen pt-10 pb-20">
+    <div class="w-full min-h-screen flex flex-col bg-blue-100">
+      <h1 class="text-xl font-bold pt-20 pl-[50px] text-gray-700">Topik yang dapat kamu pelajari</h1>
+      <div class="navigation-section-main flex flex-row flex-wrap gap-8 justify-center mt-5">
+        <a href="./article.html#mental-health">
+          <div class="group min-w-[180px] w-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+            <img class="rounded-3xl" src="../asets/article-mental-health.png" alt="Mental Health" loading="lazy">
+            <div class="p-3 my-3 text-xl text-gray-700 font-bold group-hover:text-white transition-all duration-300">
+              Mental Health
+            </div>
+          </div>
+        </a>
+        <a href="./article.html#meditasi">
+          <div class="group min-w-[180px] w-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+            <img class="rounded-3xl" src="../asets/article-meditasi.png" alt="Meditasi" loading="lazy">
+            <div class="p-3 my-3 text-xl text-gray-700 font-bold group-hover:text-white transition-all duration-300">
+              Meditasi
+            </div>
+          </div>
+        </a>
+        <a href="./article.html#mindfulness">
+          <div class="group min-w-[180px] w-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+            <img class="rounded-3xl" src="../asets/article-mindfulness.png" alt="Mindfulness" loading="lazy">
+            <div class="p-3 my-3 text-xl text-gray-700 font-bold group-hover:text-white transition-all duration-300">
+              Mindfulness
+            </div>
+          </div>
+        </a>
+        <a href="./article.html#sleep">
+          <div class="group min-w-[180px] w-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+            <img class="rounded-3xl" src="../asets/article-sleep.png" alt="Sleep" loading="lazy">
+            <div class="p-3 my-3 text-xl text-gray-700 font-bold group-hover:text-white transition-all duration-300">
+              Sleep
+            </div>
+          </div>
+        </a>
+        <a href="./article.html#pola-makan">
+          <div class="group min-w-[180px] w-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+            <img class="rounded-3xl" src="../asets/article-pola-makan.png" alt="Pola Makan" loading="lazy">
+            <div class="p-3 my-3 text-xl text-gray-700 font-bold group-hover:text-white transition-all duration-300">
+              Pola Makan
+            </div>
+          </div>
+        </a>
+        <a href="./article.html#aktivitas-fisik">
+          <div class="group min-w-[180px] w-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+            <img class="rounded-3xl" src="../asets/article-aktivitas-fisik.png" alt="Aktivitas Fisik" loading="lazy">
+            <div class="p-3 my-3 text-xl text-gray-700 font-bold group-hover:text-white transition-all duration-300">
+              Aktivitas Fisik
+            </div>
+          </div>
+        </a>
+        <a href="./article.html#kesehatan-sosial">
+          <div class="group min-w-[180px] w-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+            <img class="rounded-3xl" src="../asets/article-kesehatan-sosial.png" alt="Kesehatan Sosial" loading="lazy">
+            <div class="p-3 my-3 text-xl text-gray-700 font-bold group-hover:text-white transition-all duration-300">
+              Kesehatan Sosial
+            </div>
+          </div>
+        </a>
+        <a href="./article.html#self-care">
+          <div class="group min-w-[180px] w-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+            <img class="rounded-3xl" src="../asets/article-self-care.png" alt="Self Care" loading="lazy">
+            <div class="p-3 my-3 text-xl text-gray-700 font-bold group-hover:text-white transition-all duration-300">
+              Self Care
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
    </div>
 

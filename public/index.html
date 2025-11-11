@@ -18,24 +18,24 @@
 
   <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 w-full z-50">
-    <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="./index.html" class="md:basis-[33%] flex items-center space-x-3 rtl:space-x-reverse">
+    <div class="max-w-7xl flex flex-wrap lg:flex-nowrap items-center justify-between mx-auto p-4">
+      <a href="./index.html" class="lg:basis-[33%] flex items-center space-x-3 rtl:space-x-reverse">
           <img src="../asets/heyhelth-logo.svg" class="h-8" alt="HeyHealth Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap">Hey<span class="text-orange-600">Health</span></span>
       </a>
-      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-600 hover:text-white focus:outline-none focus:text-orange-600 focus:ring-2 focus:ring-orange-600" aria-controls="navbar-dropdown" aria-expanded="false">
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-orange-600 hover:text-white focus:outline-none focus:text-orange-600 focus:ring-2 focus:ring-orange-600" aria-controls="navbar-dropdown" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
       </button>
-      <div class="md:basis-[50%] hidden w-full md:block md:justify-items-center justify-items-end" id="navbar-dropdown">
-        <ul class="absolute md:flex md:bg-transparent bg-white flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+      <div class="absolute right-5 lg:static hidden w-fit lg:block lg:justify-items-center justify-items-end" id="navbar-dropdown">
+        <ul class="absolute lg:static lg:flex lg:bg-transparent bg-white flex-col font-medium p-4 lg:p-0 mt-4 border rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0">
           <li>
-            <a href="./index.html" class="block py-2 px-3 rounded-sm md:p-0 text-orange-600" aria-current="page">Home</a>
+            <a href="./index.html" class="block py-2 px-3 rounded-sm lg:p-0 text-orange-600" aria-current="page">Home</a>
           </li>
           <li>
-              <h1 class="text-m block py-2 px-3 rounded-sm md:p-0">
+              <h1 class="text-m block py-2 px-3 rounded-sm lg:p-0">
                 <el-dropdown class="inline-block">
                   <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
                     Education
@@ -56,7 +56,7 @@
               </h1>
           </li>
           <li>
-            <h1 class="text-m block py-2 px-3 rounded-sm md:p-0">
+            <h1 class="text-m block py-2 px-3 rounded-sm lg:p-0">
             <el-dropdown class="inline-block">
               <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
                 Tools
@@ -78,14 +78,14 @@
             </el-dropdown>
           </h1>
           <li>
-            <a href="./article.html" class="block py-2 px-3 rounded-sm md:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Article</a>
+            <a href="./article.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Article</a>
           </li>
           <li>
-            <a href="./about-us.html" class="block py-2 px-3 rounded-sm md:p-0 text-gray-900 hover:text-orange-600" aria-current="page">About Us</a>
+            <a href="./about-us.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">About Us</a>
           </li>
           <li>
-            <div class="flex md:hidden items-center justify-end">
-              <div class="flex flex-row pr-[50px] gap-10">
+            <div class="flex lg:hidden items-center justify-end">
+              <div class="flex flex-row gap-10">
                 <a href="./index.html#contact-section">
                   <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
                   Contact Us
@@ -96,7 +96,7 @@
           </li>
         </ul>
       </div>
-      <div class="basis-[17%] hidden md:flex items-center justify-end">
+      <div class=" hidden lg:flex items-center justify-end">
         <div class="flex flex-row pr-[50px] gap-10">
           <a href="./index.html#contact-section">
             <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
