@@ -110,10 +110,13 @@
    <!-- Home Section -->
    <div id="home-section" class="w-full min-h-screen border border-transparent">
     <div class="w-full min-h-screen mt-[10vh] flex flex-col">
-      <div class="basis-[80vh] flex flex-row justify-end pl-[50px] pt-10">
+      <div class="lg:basis-[80vh] flex flex-row justify-end pl-[50px] pr-[50px] pt-10">
         <div class="left w-fit">
           <div class="flex flex-col mt-[50px]">
-            <h1 class="text-5xl/20 font-bold text-gray-900"><span class="text-orange-600">Hai!</span> Siap pelajari hal <br>baru tentang kesehatan?</h1>
+            <h1 class="text-5xl/20 font-bold text-gray-900"><span class="text-orange-600">Hai!</span> Siap pelajari hal <br class="hidden lg:block">baru tentang kesehatan?</h1>
+            <div class="right basis-[50%] flex md:hidden items-start justify-center">
+              <img src="../asets/edu.png" alt="IMAGE" loading="lazy">
+            </div>
             <a class="mt-20" href="./edu-child.html#main">
               <button class="group border cursor-pointer border-orange-600 py-3 px-16 rounded-full text-xl flex flex-row gap-2 font-bold text-white bg-orange-600 hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
               Mulai Pelajari
@@ -121,13 +124,13 @@
             </a>
           </div>
         </div>
-        <div class="right basis-[50%] flex items-start justify-center">
+        <div class="right basis-[50%] hidden md:flex items-start justify-center">
           <img src="../asets/edu.png" alt="IMAGE" loading="lazy">
         </div>
       </div>
-      <div class="basis-[20vh] home-section-navigation flex flex-row flex-wrap justify-center">
+      <div class="lg:basis-[20vh] home-section-navigation mt-20 lg:mt-0 flex flex-row flex-wrap justify-center">
         <a href="./edu-child.html">
-          <div class="group min-w-[300px] w-[20vw] h-[20vw] bg-gradient-to-br from-green-400 to-green-700 rounded-3xl p-5 ms-5 my-5 flex flex-col -translate-y-2 scale-105 shadow-xl">
+          <div class="group min-w-[300px] w-[20vw] aspect-square bg-gradient-to-br from-green-400 to-green-700 rounded-3xl p-5 ms-5 my-5 flex flex-col -translate-y-2 scale-105 shadow-xl">
             <div class="icon h-[30%] flex">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto fill-white">
                 <path d="M384 128C384 92.7 355.3 64 320 64C284.7 64 256 92.7 256 128C256 163.3 284.7 192 320 192C355.3 192 384 163.3 384 128zM280.9 233.3C257.2 224.9 236.4 209 222.1 187.5L202.6 158.2C192.8 143.5 173 139.6 158.3 149.4C143.6 159.2 139.6 179 149.4 193.8L168.9 223C187 250.1 211.7 271.4 240 285.4L240 544C240 561.7 254.3 576 272 576C289.7 576 304 561.7 304 544L304 448L336 448L336 544C336 561.7 350.3 576 368 576C385.7 576 400 561.7 400 544L400 285.6C429.1 271.4 454.4 249.4 472.7 221.4L490.9 193.5C500.5 178.7 496.3 158.9 481.5 149.2C466.7 139.5 446.9 143.7 437.2 158.6L419 186.4C397.2 219.8 360.1 240 320.2 240C307.6 240 295.3 238 283.6 234.2C282.7 233.9 281.8 233.5 280.9 233.3z"/>
@@ -143,7 +146,7 @@
           </div>
         </a>
         <a href="./edu-teen.html">
-          <div class="group min-w-[300px] w-[20vw] h-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+          <div class="group min-w-[300px] w-[20vw] aspect-square bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
             <div class="icon h-[30%] flex">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto group-hover:fill-white transition-all duration-300" fill="black"><path d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z"/></svg>
             </div>
@@ -157,7 +160,7 @@
           </div>
         </a>
         <a href="./edu-adult.html">
-          <div class="group min-w-[300px] w-[20vw] h-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+          <div class="group min-w-[300px] w-[20vw] aspect-square bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
             <div class="icon h-[30%] flex">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto group-hover:fill-white transition-all duration-300" fill="black"><path d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
             </div>
@@ -171,7 +174,7 @@
           </div>
         </a>
         <a href="./edu-elderly.html">
-          <div class="group min-w-[300px] w-[20vw] h-[20vw] bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
+          <div class="group min-w-[300px] w-[20vw] aspect-square bg-white hover:bg-linear-to-br hover:from-green-400 hover:to-green-700 border border-gray-500 rounded-3xl p-5 ms-5 my-5 flex flex-col justify-center items-center transition-all duration-500 hover:-translate-y-2 hover:scale-105 shadow-md hover:shadow-xl">
             <div class="icon h-[30%] flex">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="mx-auto group-hover:fill-white transition-all duration-300" fill="black"><path d="M184 48C170.7 48 160 58.7 160 72C160 110.9 183.4 131.4 199.1 145.1L200.2 146.1C216.5 160.4 224 167.9 224 184C224 197.3 234.7 208 248 208C261.3 208 272 197.3 272 184C272 145.1 248.6 124.6 232.9 110.9L231.8 109.9C215.5 95.7 208 88.1 208 72C208 58.7 197.3 48 184 48zM128 256C110.3 256 96 270.3 96 288L96 480C96 533 139 576 192 576L384 576C425.8 576 461.4 549.3 474.5 512L480 512C550.7 512 608 454.7 608 384C608 313.3 550.7 256 480 256L128 256zM480 448L480 320C515.3 320 544 348.7 544 384C544 419.3 515.3 448 480 448zM320 72C320 58.7 309.3 48 296 48C282.7 48 272 58.7 272 72C272 110.9 295.4 131.4 311.1 145.1L312.2 146.1C328.5 160.4 336 167.9 336 184C336 197.3 346.7 208 360 208C373.3 208 384 197.3 384 184C384 145.1 360.6 124.6 344.9 110.9L343.8 109.9C327.5 95.7 320 88.1 320 72z"/></svg>
             </div>
@@ -194,18 +197,22 @@
       <h1 class="text-xl font-bold pt-20 pl-[50px] text-gray-700">Topik yang dapat kamu pelajari</h1>
       <div class="main-section-main w-[75%] mx-auto mt-10">
         <div id="indicators-carousel" class="relative w-full" data-carousel="static">
-            <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                <!-- Item 1 -->
+            <div class="relative h-96 overflow-hidden rounded-lg">
                 <div class="hidden flex flex-col duration-700 ease-in-out bg-blue-100 rounded-3xl" data-carousel-item="active">
-                    <div class="top basis-4/5 flex m-5">
-                      <div class="left basis-2/5">
-                        <iframe class="w-full h-full rounded-3xl" src="https://www.youtube.com/embed/3e2SZB6zzaA?si=XNuxQYgWE_UXHbjf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                    <div class="top basis-4/5 flex m-5 justify-center items-center">
+                      <div class="left md:basis-2/5 basis-1/2">
+                        <iframe class="w-full md:h-full aspect-video rounded-3xl" src="https://www.youtube.com/embed/3e2SZB6zzaA?si=XNuxQYgWE_UXHbjf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        <h1 class="text-xl  text-gray-900 font-bold block md:hidden my-5">Kebutuhan Cairan (Air)</h1>
+                        <a href="./materi/child/kebutuhan-cairan.html" class="block md:hidden">
+                          <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                            <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                          </button>
+                        </a>
                       </div>
-                      <div class="right basis-3/5v flex flex-col justify-center ms-5 gap-3 p-5">
-                        <h1 class="text-xl text-gray-900 font-bold">Kebutuhan Cairan (Air)</h1>
-                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Air putih sederhana, tapi jadi kunci energi dan konsentrasi anak.</h1>
-                        <a href="">
+                      <div class="right md:basis-3/5 basis-1/2 flex flex-col justify-center ms-5 gap-3 p-5 hidden md:block" >
+                        <h1 class="text-xl  text-gray-900 font-bold">Kebutuhan Cairan (Air)</h1>
+                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%] my-3">Air putih sederhana, tapi jadi kunci energi dan konsentrasi anak.</h1>
+                        <a href="./materi/child/kebutuhan-cairan.html" class="mt-3">
                           <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
                             <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
                           </button>
@@ -219,16 +226,21 @@
                       <h1 class="text-sm mt-1 text-gray-600">1 dari 7 materi</h1>
                     </div>
                 </div>
-                <!-- Item 2 -->
                 <div class="hidden flex flex-col duration-700 ease-in-out bg-blue-100 rounded-3xl" data-carousel-item>
-                    <div class="top basis-4/5 flex m-5">
-                      <div class="left basis-2/5">
-                        <iframe class="w-full h-full rounded-3xl"  src="https://www.youtube.com/embed/0nHzNYS5oEk?si=U-SMR5vlpvDjfCzO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                    <div class="top basis-4/5 flex m-5 justify-center items-center">
+                      <div class="left md:basis-2/5 basis-1/2">
+                        <iframe class="w-full md:h-full aspect-video rounded-3xl"  src="https://www.youtube.com/embed/0nHzNYS5oEk?si=U-SMR5vlpvDjfCzO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        <h1 class="text-xl  text-gray-900 font-bold block md:hidden my-5">Asupan Gizi Seimbang</h1>
+                        <a href="./materi/child/kebutuhan-cairan.html" class="block md:hidden">
+                          <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                            <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                          </button>
+                        </a>
                       </div>
-                      <div class="right basis-3/5v flex flex-col justify-center ms-5 gap-3 p-5">
+                      <div class="right md:basis-3/5 basis-1/2 flex flex-col justify-center ms-5 gap-3 p-5 hidden md:block">
                         <h1 class="text-xl text-gray-900 font-bold">Asupan Gizi Seimbang</h1>
-                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Nutrisi seimbang bantu tumbuh kembang anak jadi lebih kuat dan ceria.</h1>
-                        <a href="">
+                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%] my-3">Nutrisi seimbang bantu tumbuh kembang anak jadi lebih kuat dan ceria.</h1>
+                        <a href="./materi/child/asupan-gizi-seimbang.html">
                           <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
                             <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
                           </button>
@@ -242,16 +254,21 @@
                       <h1 class="text-sm mt-1 text-gray-600">2 dari 7 materi</h1>
                     </div>
                 </div>
-                <!-- Item 3 -->
                 <div class="hidden flex flex-col duration-700 ease-in-out bg-blue-100 rounded-3xl" data-carousel-item>
-                    <div class="top basis-4/5 flex m-5">
-                      <div class="left basis-2/5">
-                        <iframe class="w-full h-full rounded-3xl" src="https://www.youtube.com/embed/jWfPNhYbDI0?si=F-Yb0eQW1xEw6TqL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                    <div class="top basis-4/5 flex m-5 justify-center items-center">
+                      <div class="left md:basis-2/5 basis-1/2">
+                        <iframe class="w-full md:h-full aspect-video rounded-3xl" src="https://www.youtube.com/embed/jWfPNhYbDI0?si=F-Yb0eQW1xEw6TqL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        <h1 class="text-xl  text-gray-900 font-bold block md:hidden my-5">Jam Tidur Ideal</h1>
+                        <a href="./materi/child/kebutuhan-cairan.html" class="block md:hidden">
+                          <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                            <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                          </button>
+                        </a>
                       </div>
-                      <div class="right basis-3/5v flex flex-col justify-center ms-5 gap-3 p-5">
+                      <div class="right md:basis-3/5 basis-1/2 flex flex-col justify-center ms-5 gap-3 p-5 hidden md:block">
                         <h1 class="text-xl text-gray-900 font-bold">Jam Tidur Ideal</h1>
-                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Tidur cukup bantu anak tumbuh tinggi, kuat, dan bahagia.</h1>
-                        <a href="">
+                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%] my-3">Tidur cukup bantu anak tumbuh tinggi, kuat, dan bahagia.</h1>
+                        <a href="./materi/child/jam-tidur-idel.html">
                           <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
                             <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
                           </button>
@@ -265,16 +282,21 @@
                       <h1 class="text-sm mt-1 text-gray-600">3 dari 7 materi</h1>
                     </div>
                 </div>
-                <!-- Item 4 -->
                 <div class="hidden flex flex-col duration-700 ease-in-out bg-blue-100 rounded-3xl" data-carousel-item>
-                    <div class="top basis-4/5 flex m-5">
-                      <div class="left basis-2/5">
-                        <iframe class="w-full h-full rounded-3xl" src="https://www.youtube.com/embed/uKVPQWU9K5M?si=9oL9QUUusw7EnNt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                    <div class="top basis-4/5 flex m-5 justify-center items-center">
+                      <div class="left md:basis-2/5 basis-1/2">
+                        <iframe class="w-full md:h-full aspect-video rounded-3xl" src="https://www.youtube.com/embed/uKVPQWU9K5M?si=9oL9QUUusw7EnNt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        <h1 class="text-xl  text-gray-900 font-bold block md:hidden my-5">Stimulasi Perkembangan Otak</h1>
+                        <a href="./materi/child/kebutuhan-cairan.html" class="block md:hidden">
+                          <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                            <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                          </button>
+                        </a>
                       </div>
-                      <div class="right basis-3/5v flex flex-col justify-center ms-5 gap-3 p-5">
+                      <div class="right md:basis-3/5 basis-1/2 flex flex-col justify-center ms-5 gap-3 p-5 hidden md:block">
                         <h1 class="text-xl text-gray-900 font-bold">Stimulasi Perkembangan Otak</h1>
-                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Belajar bisa lewat bermain setiap permainan kembangkan imajinasi anak.</h1>
-                        <a href="">
+                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%] my-3">Belajar bisa lewat bermain setiap permainan kembangkan imajinasi anak.</h1>
+                        <a href="./materi/child/stimulasi-perkembangan-otak.html">
                           <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
                             <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
                           </button>
@@ -288,16 +310,21 @@
                       <h1 class="text-sm mt-1 text-gray-600">4 dari 7 materi</h1>
                     </div>
                 </div>
-                <!-- Item 5 -->
                 <div class="hidden flex flex-col duration-700 ease-in-out bg-blue-100 rounded-3xl" data-carousel-item>
-                    <div class="top basis-4/5 flex m-5">
-                      <div class="left basis-2/5">
-                        <iframe class="w-full h-full rounded-3xl" src="https://www.youtube.com/embed/9RhvvYsYuEM?si=bGG5gUucRkTmfL6-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                    <div class="top basis-4/5 flex m-5 justify-center items-center">
+                      <div class="left md:basis-2/5 basis-1/2">
+                        <iframe class="w-full md:h-full aspect-video rounded-3xl" src="https://www.youtube.com/embed/9RhvvYsYuEM?si=bGG5gUucRkTmfL6-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        <h1 class="text-xl  text-gray-900 font-bold block md:hidden my-5">Aktivitas Fisik dan Alam</h1>
+                        <a href="./materi/child/kebutuhan-cairan.html" class="block md:hidden">
+                          <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                            <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                          </button>
+                        </a>
                       </div>
-                      <div class="right basis-3/5v flex flex-col justify-center ms-5 gap-3 p-5">
+                      <div class="right md:basis-3/5 basis-1/2 flex flex-col justify-center ms-5 gap-3 p-5 hidden md:block">
                         <h1 class="text-xl text-gray-900 font-bold">Aktivitas Fisik dan Alam</h1>
-                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Anak yang sering bermain di alam tumbuh lebih kuat dan percaya diri.</h1>
-                        <a href="">
+                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%] my-3">Anak yang sering bermain di alam tumbuh lebih kuat dan percaya diri.</h1>
+                        <a href="./materi/child/aktivitas-fisik-dan-alam.html">
                           <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
                             <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
                           </button>
@@ -312,14 +339,20 @@
                     </div>
                 </div>
                 <div class="hidden flex flex-col duration-700 ease-in-out bg-blue-100 rounded-3xl" data-carousel-item>
-                    <div class="top basis-4/5 flex m-5">
-                      <div class="left basis-2/5">
-                        <iframe class="w-full h-full rounded-3xl" src="https://www.youtube.com/embed/TkoujmOoH0Y?si=kmeaL4z12NAW3J_u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                    <div class="top basis-4/5 flex m-5 justify-center items-center">
+                      <div class="left md:basis-2/5 basis-1/2">
+                        <iframe class="w-full md:h-full aspect-video rounded-3xl" src="https://www.youtube.com/embed/TkoujmOoH0Y?si=kmeaL4z12NAW3J_u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        <h1 class="text-xl  text-gray-900 font-bold block md:hidden my-5">Kesehatan Dasar dan Kebersihan Diri</h1>
+                        <a href="./materi/child/kebutuhan-cairan.html" class="block md:hidden">
+                          <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                            <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                          </button>
+                        </a>
                       </div>
-                      <div class="right basis-3/5v flex flex-col justify-center ms-5 gap-3 p-5">
+                      <div class="right md:basis-3/5 basis-1/2 flex flex-col justify-center ms-5 gap-3 p-5 hidden md:block">
                         <h1 class="text-xl text-gray-900 font-bold">Kesehatan Dasar dan Kebersihan Diri</h1>
-                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Kebiasaan kecil seperti cuci tangan dan sikat gigi melindungi anak dari penyakit.</h1>
-                        <a href="">
+                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%] my-3">Kebiasaan kecil seperti cuci tangan dan sikat gigi melindungi anak dari penyakit.</h1>
+                        <a href="./materi/child/kesehatan-dan-kebersihan-diri.html">
                           <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
                             <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
                           </button>
@@ -334,14 +367,20 @@
                     </div>
                 </div>
                 <div class="hidden flex flex-col duration-700 ease-in-out bg-blue-100 rounded-3xl" data-carousel-item>
-                    <div class="top basis-4/5 flex m-5">
-                      <div class="left basis-2/5">
-                        <iframe class="w-full h-full rounded-3xl" src="https://www.youtube.com/embed/-YcO0ZCgX-s?si=Qm8WPZZW9zdClDg2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                    <div class="top basis-4/5 flex m-5 justify-center items-center">
+                      <div class="left md:basis-2/5 basis-1/2">
+                        <iframe class="w-full md:h-full aspect-video rounded-3xl" src="https://www.youtube.com/embed/-YcO0ZCgX-s?si=Qm8WPZZW9zdClDg2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        <h1 class="text-xl  text-gray-900 font-bold block md:hidden my-5">Kesehatan Mental Anak</h1>
+                        <a href="./materi/child/kebutuhan-cairan.html" class="block md:hidden">
+                          <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                            <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                          </button>
+                        </a>
                       </div>
-                      <div class="right basis-3/5v flex flex-col justify-center ms-5 gap-3 p-5">
+                      <div class="right md:basis-3/5 basis-1/2 flex flex-col justify-center ms-5 gap-3 p-5 hidden md:block">
                         <h1 class="text-xl text-gray-900 font-bold">Kesehatan Mental Anak</h1>
-                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Kasih sayang dan pelukan hangat bantu anak merasa aman dan berani tumbuh.</h1>
-                        <a href="">
+                        <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%] my-3">Kasih sayang dan pelukan hangat bantu anak merasa aman dan berani tumbuh.</h1>
+                        <a href="./materi/child/kesehatan-mental-anak.html">
                           <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
                             <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
                           </button>
@@ -356,7 +395,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Slider indicators -->
             <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
                 <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
                 <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
@@ -366,7 +404,6 @@
                 <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
                 <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
             </div>
-            <!-- Slider controls -->
             <button type="button" class="absolute bottom-5 start-0 z-30 flex items-center justify-center px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                     <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -383,7 +420,110 @@
                     <span class="sr-only">Next</span>
                 </span>
             </button>
-        </div>
+            </div>
+              <div id="accordion-collapse" class=" -bottom-1 mt-2 left-0 right-0" data-accordion="collapse">
+                <h2 id="accordion-collapse-heading-1">
+                  <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right bg-blue-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 hover:bg-blue-600 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                    <span class="text-xl">Lihat Materi Selengkapnya</span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="accordion-collapse-body-1" class="hidden mb-5" aria-labelledby="accordion-collapse-heading-1">
+                  <div class="p-5 border border-b-0 border-gray-200 flex flex-col md:flex-row md:justify-between">
+                    <div class="left md:basis-[80%]">
+                      <h1 class="text-xl text-gray-900 font-bold">Kebutuhan Cairan (Air)</h1>
+                      <h1 class="text-md mt-2 text-gray-700 w-[75%]">Air putih sederhana, tapi jadi kunci energi dan konsentrasi anak.</h1>
+                    </div>
+                    <div class="right md:basis-[20%] p-5">
+                      <a href="./materi/child/kebutuhan-cairan.html">
+                            <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                              <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                            </button>
+                          </a>
+                    </div>
+                  </div>
+                  <div class="p-5 border border-b-0 border-gray-200 flex flex-col md:flex-row md:justify-between">
+                    <div class="left basis-[80%]">
+                      <h1 class="text-xl text-gray-900 font-bold">Asupan Gizi Seimbang</h1>
+                      <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Nutrisi seimbang bantu tumbuh kembang anak jadi lebih kuat dan ceria.</h1>
+                    </div>
+                    <div class="right basis-[20%] p-5">
+                      <a href="./materi/child/asupan-gizi-seimbang.html">
+                            <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                              <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                            </button>
+                          </a>
+                    </div>
+                  </div>
+                  <div class="p-5 border border-b-0 border-gray-200 flex flex-col md:flex-row md:justify-between">
+                    <div class="left basis-[80%]">
+                      <h1 class="text-xl text-gray-900 font-bold">Jam Tidur Ideal</h1>
+                          <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Tidur cukup bantu anak tumbuh tinggi, kuat, dan bahagia.</h1>
+                    </div>
+                    <div class="right basis-[20%] p-5">
+                      <a href="./materi/child/jam-tidur-idel.html">
+                            <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                              <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                            </button>
+                          </a>
+                    </div>
+                  </div>
+                  <div class="p-5 border border-b-0 border-gray-200 flex flex-col md:flex-row md:justify-between">
+                    <div class="left basis-[80%]">
+                      <h1 class="text-xl text-gray-900 font-bold">Stimulasi Perkembangan Otak</h1>
+                          <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Belajar bisa lewat bermain setiap permainan kembangkan imajinasi anak.</h1>
+                    </div>
+                    <div class="right basis-[20%] p-5">
+                      <a href="./materi/child/stimulasi-perkembangan-otak.html">
+                            <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                              <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                            </button>
+                          </a>
+                    </div>
+                  </div>
+                  <div class="p-5 border border-b-0 border-gray-200 flex flex-col md:flex-row md:justify-between">
+                    <div class="left basis-[80%]">
+                      <h1 class="text-xl text-gray-900 font-bold">Aktivitas Fisik dan Alam</h1>
+                          <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Anak yang sering bermain di alam tumbuh lebih kuat dan percaya diri.</h1>
+                    </div>
+                    <div class="right basis-[20%] p-5">
+                      <a href="./materi/child/aktivitas-fisik-dan-alam.html">
+                            <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                              <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                            </button>
+                          </a>
+                    </div>
+                  </div>
+                  <div class="p-5 border border-b-0 border-gray-200 flex flex-col md:flex-row md:justify-between">
+                    <div class="left basis-[80%]">
+                      <h1 class="text-xl text-gray-900 font-bold">Kesehatan Dasar dan Kebersihan Diri</h1>
+                          <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Kebiasaan kecil seperti cuci tangan dan sikat gigi melindungi anak dari penyakit.</h1>
+                    </div>
+                    <div class="right basis-[20%] p-5">
+                      <a href="./materi/child/kesehatan-dan-kebersihan-diri.html">
+                            <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                              <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                            </button>
+                          </a>
+                    </div>
+                  </div>
+                  <div class="p-5 border border-b-0 border-gray-200 flex flex-col md:flex-row md:justify-between">
+                    <div class="left basis-[80%]">
+                      <h1 class="text-xl text-gray-900 font-bold">Kesehatan Mental Anak</h1>
+                          <h1 class="text-md mt-2 text-gray-700 font-semibold w-[75%]">Kasih sayang dan pelukan hangat bantu anak merasa aman dan berani tumbuh.</h1>
+                    </div>
+                    <div class="right basis-[20%] p-5">
+                      <a href="./materi/child/kesehatan-mental-anak.html">
+                            <button class="group flex flex-row gap-2 items-center px-10 py-2 rounded-full border border-blue-600 bg-blue-600 cursor-pointer hover:scale-105 hover:bg-white transition-all duration-300">
+                              <h1 class="text-md font-bold text-white group-hover:text-blue-600">Selengkapnya</h1>
+                            </button>
+                          </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
       </div>
     </div>
    </div>
