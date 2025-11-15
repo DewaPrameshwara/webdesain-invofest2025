@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education - Adult | HeyHealth</title>
-  <link rel="Icon" type="png" href="../../../asets/heyhelth-logo.svg">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>BMI Calculator | HeyHealth</title>
+  <link rel="Icon" type="png" href="../../asets/heyhelth-logo.svg">
+  <!-- <link rel="stylesheet" href="../src/style.css"> -->
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 
@@ -15,10 +15,11 @@
   <svg class="absolute -z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#dff2fe" fill-opacity="10" d="M0,192L80,202.7C160,213,320,235,480,202.7C640,171,800,85,960,90.7C1120,96,1280,192,1360,240L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
   </svg>
 
+  <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 w-full z-50">
     <div class="max-w-7xl flex flex-wrap lg:flex-nowrap items-center justify-between mx-auto p-4">
-      <a href="../../index.html" class="lg:basis-[33%] flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="../../../asets/heyhelth-logo.svg" class="h-8" alt="HeyHealth Logo" />
+      <a href="../index.html" class="lg:basis-[33%] flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="../../asets/heyhelth-logo.svg" class="h-8" alt="HeyHealth Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap">Hey<span class="text-orange-600">Health</span></span>
       </a>
       <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-orange-600 hover:text-white focus:outline-none focus:text-orange-600 focus:ring-2 focus:ring-orange-600" aria-controls="navbar-dropdown" aria-expanded="false">
@@ -30,12 +31,12 @@
       <div class="absolute right-5 lg:static hidden w-fit lg:block lg:justify-items-center justify-items-end" id="navbar-dropdown">
         <ul class="absolute lg:static lg:flex lg:bg-transparent bg-white flex-col font-medium p-4 lg:p-0 mt-4 border rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0">
           <li>
-            <a href="../../index.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Home</a>
+            <a href="../index.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Home</a>
           </li>
           <li>
               <h1 class="text-m block py-2 px-3 rounded-sm lg:p-0">
                 <el-dropdown class="inline-block">
-                  <button class="inline-flex w-full justify-center gap-x-1.5 text-orange-600">
+                  <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
                     Education
                     <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
                       <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
@@ -44,10 +45,10 @@
 
                   <el-menu anchor="bottom end" popover class="w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
                     <div class="py-1">
-                      <a href="../../edu-child.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Children's Age</a>
-                      <a href="../../edu-teen.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Teenage's Age</a>
-                      <a href="../../edu-adult.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Adult's Age</a>
-                      <a href="../../edu-elderly.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Elderly's Age</a>
+                      <a href="./edu-child.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Children's Age</a>
+                      <a href="./edu-teen.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Teenage's Age</a>
+                      <a href="./edu-adult.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Adult's Age</a>
+                      <a href="./edu-elderly.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Elderly's Age</a>
                     </div>
                   </el-menu>
                 </el-dropdown>
@@ -56,7 +57,7 @@
           <li>
             <h1 class="text-m block py-2 px-3 rounded-sm lg:p-0">
             <el-dropdown class="inline-block">
-              <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
+              <button class="inline-flex w-full justify-center gap-x-1.5 text-orange-600">
                 Tools
                 <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
                   <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
@@ -65,20 +66,20 @@
 
               <el-menu anchor="bottom end" popover class="w-min-56 w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
                 <div class="py-1">
-                  <a href="../../tools.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Tools</a>
-                  <a href="../../tools/bmi-calc.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">BMI Calculator</a>
-                  <a href="../../tools/water-reminder.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Water Reminder</a>
-                  <a href="../../tools/breathing-exercise.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Breathing Exercise</a>
-                  <a href="../../tools/relaxing-music.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Relaxing Music</a>
+                  <a href="./tools.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Tools</a>
+                  <a href="./tools/bmi-calc.html" class="block px-4 ml-3 py-2 text-sm bg-orange-600 text-white outline-hidden">BMI Calculator</a>
+                  <a href="./tools/water-reminder.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Water Reminder</a>
+                  <a href="./tools/breathing-exercise.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Breathing Exercise</a>
+                  <a href="./tools/relaxing-music.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Relaxing Music</a>
                 </div>
               </el-menu>
             </el-dropdown>
           </h1>
           <li>
-            <a href="../../article.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Article</a>
+            <a href="../article.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Article</a>
           </li>
           <li>
-            <a href="../../about-us.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">About Us</a>
+            <a href="../about-us.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">About Us</a>
           </li>
           <li>
             <div class="flex lg:hidden items-center justify-end">
@@ -105,135 +106,52 @@
     </div>
   </nav>
 
-   <main id="home-section" class="w-full min-h-screen">
-    <div class="w-full min-h-screen pt-[20vh] grid grid-rows-1 grid-cols-4">
-      <div class="left col-span-4 md:col-span-3 p-5 pt-0">
-        <div class="top">
-          <iframe id="youtubeVideo" class="xs:w-full md:w-[80%] aspect-video rounded-3xl" src="https://www.youtube.com/embed/A2OqgmUJrNw?si=cEZm_BhWZILFBbBz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
-          <h1 class="text-md xs:w-full md:w-[80%] text-gray-900 font-bold my-5"> Hubungan dan Sosial <span id="textTitle" class="text-md font-medium text-gray-600">Menjalin hubungan yang sehat dengan komunikasi.</span></h1>          
-          <div class="flex items-center gap-1 -mt-7 mb-5">
-            <img src="" id="ppChannel" class="rounded-full w-10" alt="">
-            <h1 id="textChannel" class="text-md text-gray-900 font-bold my-5"></h1>
+  <!-- Main Section -->
+   <div id="main-section" class="w-full border border-transparent">
+    <div class="w-full mt-[10vh] md:mt-[20vh] min-h-screen pt-8">
+      <div class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 bg-blue-50 mx-5 md:mx-20 p-10 rounded-3xl">
+        <div class="left basis-full">
+          <div class="flex flex-col mt-[50px]">
+            <h1 class="text-4xl font-bold text-gray-800">Kalkulator BMI</h1>
+            <h1 id="result" class="w-full mt-3 px-4 py-2 rounded-lg bg-white border border-gray-500 text-gray-800 :outline-none :ring-2 :ring-blue-300">Result</h1>
+            <form class="flex flex-col mt-3 gap-3">
+              <input id="beratBadan" type="text" placeholder="Berat Badan (kg)" class="w-full px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <input id="tinggiBadan" type="text" placeholder="Tinggi Badan (cm)" class="w-full px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <button type="submit"
+                class="w-[50%] border border-white bg-white text-blue-800 font-semibold py-2 mt-5 rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:scale-105 hover:bg-sky-800 hover:text-white">
+                Kirim
+              </button>
+            </form>
+            <p class="mt-10 hidden md:block text-justify text-gray-700">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di Kalkulator BMI.</p>
           </div>
         </div>
-        <div class="bottom bg-blue-100 p-10 rounded-xl xs:w-full md:w-[80%] text-justify">
-          <h1 class="font-bold mt-2">A. Pengertian Hubungan dan Sosial</h1>
-          <p class="mt-2 text-sm indent-8">Hubungan dan sosial adalah kemampuan seseorang untuk berinteraksi, berkomunikasi, dan membangun relasi yang positif dengan orang lain, baik di lingkungan keluarga, sekolah, maupun masyarakat. Hubungan yang sehat ditandai dengan saling menghargai, memahami, dan memberikan dukungan. Menjalin hubungan sosial yang baik berarti mampu berkomunikasi secara jelas, mendengarkan dengan empati, serta menjaga batasan diri dan orang lain.</p>
-
-          <h1 class="font-bold mt-2">B. Pentingnya Hubungan dan Sosial</h1>
-          <p class="mt-2 text-sm">Menjaga hubungan sosial yang sehat sangat penting karena:
-            <ul class="text-sm ps-5 list-disc">
-              <li>
-                Membantu membangun rasa percaya diri dan harga diri.
-              </li>
-              <li>
-                Memberikan dukungan emosional saat menghadapi tantangan.
-              </li>
-              <li>
-                Membentuk kemampuan bekerja sama dan berkomunikasi dengan baik.
-              </li>
-              <li>
-                Meningkatkan rasa aman dan nyaman dalam kehidupan sehari-hari.
-              </li>
-              <li>
-                Mencegah konflik dan kesalahpahaman dalam hubungan.
-              </li>
-            </ul>
-          </p>
-
-          <h1 class="font-bold mt-2">C. Kebiasaan Baik dalam Hubungan dan Sosial</h1>
-          <p class="mt-2 text-sm">Beberapa kebiasaan penting dalam membangun hubungan sosial yang sehat antara lain:
-            <ol class="text-sm ps-5">
-              <li>
-                <h1 class="font-bold">1. Berkomunikasi dengan jujur dan jelas.</h1>
-                <p class="indent-4">Mengungkapkan perasaan dan pikiran tanpa menyakiti orang lain.</p>
-              </li>
-              <li>
-                <h1 class="font-bold">2. Mendengarkan dengan empati.</h1>
-                <p class="indent-4">Memberi perhatian saat orang lain berbicara dan memahami sudut pandangnya.</p>
-              </li>
-              <li>
-                <h1 class="font-bold">3. Menghargai perbedaan.</h1>
-                <p class="indent-4">Setiap orang memiliki cara berpikir, budaya, dan kebiasaan berbeda.</p>
-              </li>
-              <li>
-                <h1 class="font-bold">4. Menjaga batasan diri dan orang lain.</h1>
-                <p class="indent-4">Tidak memaksa, tidak menekan, dan memahami bahwa setiap orang punya ruang pribadi.</p>
-              </li>
-              <li>
-                <h1 class="font-bold">5. Menunjukkan sikap sopan dan saling menghormati.</h1>
-                <p class="indent-4">Perilaku kecil seperti mengucapkan terima kasih atau meminta maaf mempererat hubungan.</p>
-              </li>
-              <li>
-                <h1 class="font-bold">6. Mengelola emosi saat berinteraksi.</h1>
-                <p class="indent-4">Tetap tenang agar tidak terjadi konflik yang tidak perlu.</p>
-              </li>
-              <li>
-                <h1 class="font-bold">7. Memilih lingkungan yang positif.</h1>
-                <p class="indent-4">Berada di sekitar orang yang mendukung perkembanganmu.</p>
-              </li>
-            </ol>
-          </p>
-          
-          
-
-          <h1 class="font-bold mt-2">D. Langkah-Langkah Membangun Hubungan Sosial yang Sehat</h1>
-          <p class="mt-2 text-sm">
-            <ol class="text-sm ps-5 list-decimal">
-              <li>
-                <h1 class="font-bold inline">Latih komunikasi yang baik:</h1> Gunakan kata yang sopan dan jelas saat berbicara.
-              </li>
-              <li>
-                <h1 class="font-bold inline">Belajar memahami orang lain:</h1> Cobalah melihat situasi dari sudut pandang mereka.
-              </li>
-              <li>
-                <h1 class="font-bold inline">Bangun kepercayaan:</h1> Jangan menyebarkan rahasia atau membicarakan orang lain secara negatif.
-              </li>
-              <li>
-                <h1 class="font-bold inline">Berani menetapkan batasan:</h1> Tegas mengatakan "tidak" ketika sesuatu tidak membuat nyaman.
-              </li>
-              <li>
-                <h1 class="font-bold inline">Tunjukkan kepedulian:</h1> Tanyakan kabar atau bantu teman yang sedang kesulitan.
-              </li>
-            </ol>
-          </p>
-
-          <h1 class="font-bold mt-2">E. Dampak Jika Tidak Menjaga Hubungan dan Sosial</h1>
-          <p class="mt-2 text-sm">Tidak menjaga hubungan sosial yang sehat dapat menyebabkan:
-            <ul class="text-sm ps-5 list-disc">
-              <li>
-                Konflik yang berulang dan hubungan yang mudah rusak.
-              </li>
-              <li>
-                Rasa kesepian atau tidak dihargai.
-              </li>
-              <li>
-                Kesulitan bekerja sama di sekolah atau lingkungan sekitar.
-              </li>
-              <li>
-                Ketidakmampuan mengelola emosi saat berinteraksi.
-              </li>
-              <li>
-                Lingkungan pertemanan yang tidak mendukung atau negatif.
-              </li>
-            </ul>
-          </p>
+        <div class="right flex flex-col items-center justify-center mt-5">
+          <h1 class="text-3xl font-bold text-gray-800 mb-8">Pilih Gender</h1>
+          <form class="flex flex-row gap-15 w-[60%]">
+              <input type="radio" id="gender-male" name="gender" value="male" class="hidden">
+              <label for="gender-male">
+                <img src="../../asets/gender-male-on.png" alt="Male" class="cursor-pointer" loading="lazy">
+              </label>
+              <input type="radio" id="gender-female" name="gender" value="female" class="hidden">
+              <label for="gender-female">
+                <img src="../../asets/gender-female-on.png" alt="Female" class="cursor-pointer" loading="lazy">
+              </label>
+          </form>
         </div>
-      </div>
-      <div class="right md:col-span-1 pe-5">
-        <img src="../../../asets/edu-poster.png" alt="Educative Poster">
+        <p class="mt-10 block md:hidden text-justify text-gray-700">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di Kalkulator BMI.</p>
       </div>
     </div>
-  </main>
+   </div>
    
-  <div id="footer" class="w-full min-h-[60px] flex flex-col">
+  <!-- Footer -->
+   <div id="footer" class="w-full min-h-[60px] flex flex-col">
     <svg class="rotate-180 fill-sky-100" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
     </svg>
-    <div class="foot w-full min-h-[60px] pl-[50px] bg-sky-100 grid grid-rows-3 grid-cols-1 md:grid-rows-1 md:grid-cols-3 px-5 py-10">
+    <div class="foot w-full min-h-[60px] pl-[0] md:pl-[50px] bg-sky-100 grid grid-rows-3 grid-cols-1 md:grid-rows-1 md:grid-cols-3 px-5 py-10">
       <div class="left basis-[35%]">
         <div class="flex flex-row gap-2 items-center">
-          <img class="w-[10%] min-w-10" src="../../../asets/heyhelth-logo.svg" alt="LOGO">
+          <img class="w-[10%] min-w-10" src="../../asets/heyhelth-logo.svg" alt="LOGO">
           <h1 class="font-bold text-2xl">Hey<span class="text-orange-600">Health</span></h1>
         </div>
         <p class=" mt-3">Sapaan hangat untuk kesehatanmu di masa depan. Hey<span class="text-orange-600">Health</span> siap menemani perjalananmu.</p>
@@ -273,17 +191,18 @@
       </div>
     </div>
     <div class="foot w-full flex py-8 bg-sky-100">
-      <p class="block mx-auto text-gray-900">Copyright © 2025 HeyHealth. All rights reserved.</p>
+      <p class="block mx-auto text-gray-900">Copyright &copy; 2025 HeyHealth. All rights reserved.</p>
     </div>
    </div>
 
-  <a href="" class="goUp hidden group fixed z-50 bottom-0 right-0 m-5 w-[60px] aspect-square border-3 border-orange-600 bg-orange-600 rounded-full p-3 hover:bg-white hover:scale-105 hover:animate-bounce transition-all duration-300">
+  <!-- Fitur Go Up -->
+   <a href="" class="goUp hidden group fixed z-50 bottom-0 right-0 m-5 w-[60px] aspect-square border-3 border-orange-600 bg-orange-600 rounded-full p-3 hover:bg-white hover:scale-105 hover:animate-bounce transition-all duration-300">
     <svg class="fill-white group-hover:fill-orange-600 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
    </a>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-  <script src="../../../script/main.js"></script>
-  <script src="../../../script/youtubeGetChannel.js"></script>
+  <script src="../script/main.js"></script>
+  <script src="../../script/bmiCalculator.js"></script>
 </body>
 </html>

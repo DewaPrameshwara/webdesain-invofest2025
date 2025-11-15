@@ -68,11 +68,10 @@
               <el-menu anchor="bottom end" popover class="w-min-56 w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
                 <div class="py-1">
                   <a href="./tools.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Tools</a>
-                  <a href="./tools.html#stressRelief" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Stress Relief</a>
-                  <a href="./tools.html#breathingExercise" class="block ml-8 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Breathing Exercise</a>
-                  <a href="./tools.html#calmingMusic" class="block ml-8 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Calming Music</a>
-                  <a href="./tools.html#healtyFood" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Healthy Food</a>
-                  <a href="./tools.html#dailyPlanner" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Daily Planner Recommendations</a>
+                  <a href="./tools/bmi-calc.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">BMI Calculator</a>
+                  <a href="./tools/water-reminder.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Water Reminder</a>
+                  <a href="./tools/breathing-exercise.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Breathing Exercise</a>
+                  <a href="./tools/relaxing-music.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Relaxing Music</a>
                 </div>
               </el-menu>
             </el-dropdown>
@@ -111,7 +110,7 @@
   <!-- Home Section -->
    <div id="home-section" class="w-full border border-transparent">
     <div class="w-full mt-[10vh] flex flex-col">
-      <div class="flex flex-row justify-center items-center pl-[50px] pt-20 gap-5  bg-[url(../asets/about-us2.png)] bg-no-repeat">
+      <div class="flex flex-row justify-center items-center pl-[0] md:pl-[50px] pt-20 gap-5  bg-[url(../asets/about-us2.png)] bg-no-repeat">
         <div class="left basis-[40%]">
           <div class="flex flex-col">
             <h1 class="text-6xl/20 font-bold ">Tentang <br> Hey<span class="text-orange-600">Health</span></h1>
@@ -182,13 +181,13 @@
   <!-- Platform Section -->
    <div id="platform-section" class="w-full">
     <div class="w-full flex flex-col">
-      <div class="basis-[80%] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 justify-evenly pl-[50px] pt-20">
+      <div class="basis-[80%] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 justify-evenly pl-[0] md:pl-[50px] pt-20">
         <div class="left basis-[40%] flex items-start justify-center">
           <img src="../asets/logo-big.png" alt="IMAGE" loading="lazy">
         </div>
         <div class="right basis-[50%] ">
           <div class="flex flex-col mt-[50px] items-start">
-            <p class="w-[85%] text-justify text-gray-700 text-xl">Hey<span class="text-orange-600">Health</span> adalah platform edukasi kesehatan yang hangat dan inklusif, dirancang untuk membuat hidup sehat menjadi sederhana dan mudah diakses oleh semua orang. Hey<span class="text-orange-600">Health</span> mengajak setiap orang untuk memulai perjalanan sehat melalui langkah kecil, percakapan ringan, dan kebiasaan positif setiap hari.</p>
+            <p class="w-[85%] text-justify mx-auto text-gray-700 text-xl">Hey<span class="text-orange-600">Health</span> adalah platform edukasi kesehatan yang hangat dan inklusif, dirancang untuk membuat hidup sehat menjadi sederhana dan mudah diakses oleh semua orang. Hey<span class="text-orange-600">Health</span> mengajak setiap orang untuk memulai perjalanan sehat melalui langkah kecil, percakapan ringan, dan kebiasaan positif setiap hari.</p>
           </div>
         </div>
       </div>
@@ -420,7 +419,7 @@
     <svg class="rotate-180 fill-sky-100" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
     </svg>
-    <div class="foot w-full min-h-[60px] pl-[50px] bg-sky-100 grid grid-rows-3 grid-cols-1 md:grid-rows-1 md:grid-cols-3 px-5 py-10">
+    <div class="foot w-full min-h-[60px] pl-[0] md:pl-[50px] bg-sky-100 grid grid-rows-3 grid-cols-1 md:grid-rows-1 md:grid-cols-3 px-5 py-10">
       <div class="left basis-[35%]">
         <div class="flex flex-row gap-2 items-center">
           <img class="w-[10%] min-w-10" src="../asets/heyhelth-logo.svg" alt="LOGO">
