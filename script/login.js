@@ -139,8 +139,8 @@
 
 //ui utils
     function switchScreen(screenId) {
-        document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
-        setTimeout(() => document.getElementById(screenId).classList.add('active'), 10);
+        document.querySelectorAll(".screen").forEach((el) => el.classList.add("hidden"));
+        setTimeout(() => document.getElementById(screenId).classList.remove("hidden"), 10);
         document.querySelectorAll('.error-msg').forEach(el => el.style.display = 'none');
         
         if(screenId.includes('login') || screenId.includes('register')) {

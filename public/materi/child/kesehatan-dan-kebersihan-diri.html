@@ -15,93 +15,106 @@
   <svg class="absolute -z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#dff2fe" fill-opacity="10" d="M0,192L80,202.7C160,213,320,235,480,202.7C640,171,800,85,960,90.7C1120,96,1280,192,1360,240L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
   </svg>
 
+  <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 w-full z-50">
     <div class="max-w-7xl flex flex-wrap lg:flex-nowrap items-center justify-between mx-auto p-4">
-      <a href="../../index.html" class="lg:basis-[33%] flex items-center space-x-3 rtl:space-x-reverse">
+      
+      <a href="../../index.html" class="flex items-center space-x-3 rtl:space-x-reverse shrink-0">
           <img src="../../../asets/heyhelth-logo.svg" class="h-8" alt="HeyHealth Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap">Hey<span class="text-orange-600">Health</span></span>
       </a>
+
       <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-orange-600 hover:text-white focus:outline-none focus:text-orange-600 focus:ring-2 focus:ring-orange-600" aria-controls="navbar-dropdown" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
       </button>
-      <div class="absolute right-5 lg:static hidden w-fit lg:block lg:justify-items-center justify-items-end" id="navbar-dropdown">
-        <ul class="absolute lg:static lg:flex lg:bg-transparent bg-white flex-col font-medium p-4 lg:p-0 mt-4 border rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0">
+
+      <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
+        <ul class="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0  lg:items-center">
           <li>
-            <a href="../../index.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Home</a>
+            <a href="../../index.html" class="block py-2 px-3 rounded-sm lg:p-0 hover:text-orange-600" aria-current="page">Home</a>
           </li>
+          
           <li>
-              <h1 class="text-m block py-2 px-3 rounded-sm lg:p-0">
+             <div class="block py-2 px-3 rounded-sm lg:p-0">
                 <el-dropdown class="inline-block">
-                  <button class="inline-flex w-full justify-center gap-x-1.5 text-orange-600">
+                  <button class="inline-flex w-full justify-center gap-x-1.5 text-orange-600 items-center">
                     Education
-                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="-mr-1 size-5 text-gray-400">
                       <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                     </svg>
                   </button>
-
-                  <el-menu anchor="bottom end" popover class="w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                  <el-menu anchor="bottom end" popover class="w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition">
                     <div class="py-1">
-                      <a href="../../edu-child.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Children's Age</a>
-                      <a href="../../edu-teen.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Teenage's Age</a>
-                      <a href="../../edu-adult.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Adult's Age</a>
-                      <a href="../../edu-elderly.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Elderly's Age</a>
+                      <a href="../../edu-child.html" class="block px-4 py-2 text-sm bg-orange-600 text-white">Children's Age</a>
+                      <a href="../../edu-teen.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white">Teenage's Age</a>
+                      <a href="../../edu-adult.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white">Adult's Age</a>
+                      <a href="../../edu-elderly.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white">Elderly's Age</a>
                     </div>
                   </el-menu>
                 </el-dropdown>
-              </h1>
+             </div>
           </li>
+
           <li>
-            <h1 class="text-m block py-2 px-3 rounded-sm lg:p-0">
+            <div class="block py-2 px-3 rounded-sm lg:p-0">
             <el-dropdown class="inline-block">
-              <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600">
+              <button class="inline-flex w-full justify-center gap-x-1.5 hover:text-orange-600 items-center">
                 Tools
-                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="-mr-1 size-5 text-gray-400">
                   <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                 </svg>
               </button>
-
-              <el-menu anchor="bottom end" popover class="w-min-56 w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+              <el-menu anchor="bottom end" popover class="w-fit origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition">
                 <div class="py-1">
-                  <a href="../../tools.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Tools</a>
-                  <a href="../../tools/bmi-calc.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">BMI Calculator</a>
-                  <a href="../../tools/water-reminder.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Water Reminder</a>
-                  <a href="../../tools/breathing-exercise.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Breathing Exercise</a>
-                  <a href="../../tools/relaxing-music.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white focus:outline-hidden">Relaxing Music</a>
+                  <a href="../../tools.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white">Tools</a>
+                  <a href="../../tools/bmi-calc.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white">BMI Calculator</a>
+                  <a href="../../tools/water-reminder.html" class="block px-4 ml-3 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white">Water Reminder</a>
+                  <a href="../../tools/breathing-exercise.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white">Breathing Exercise</a>
+                  <a href="../../tools/relaxing-music.html" class="block ml-3 px-4 py-2 text-sm text-gray-700 focus:bg-orange-600 focus:text-white">Relaxing Music</a>
                 </div>
               </el-menu>
             </el-dropdown>
-          </h1>
+            </div>
+          </li>
+
           <li>
             <a href="../../article.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">Article</a>
           </li>
           <li>
             <a href="../../about-us.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">About Us</a>
           </li>
-          <li>
-            <div class="flex lg:hidden items-center justify-end">
-              <div class="flex flex-row gap-10">
-                <a href="../../../public/index.html#contact-section">
-                  <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
-                  Contact Us
-                  </button>
-                </a>
-              </div>
-            </div>
+          
+          <li class="lg:hidden mt-4 flex flex-col gap-3">
+            <a href="../../index.html#contact-section">
+                <button class="w-full text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 transition-all duration-300">
+                Contact Us
+                </button>
+            </a>
+            <a href="../../login.html">
+              <button class="w-full text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 transition-all duration-300">
+              Login
+              </button>
+            </a>
           </li>
         </ul>
       </div>
-      <div class=" hidden lg:flex items-center justify-end">
-        <div class="flex flex-row pr-[50px] gap-10">
-          <a href="../../../public/index.html#contact-section">
-            <button class="text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
+
+      <div class="hidden lg:flex items-center gap-4 shrink-0">
+          <a href="../../index.html#contact-section">
+            <button class="text-m whitespace-nowrap cursor-pointer bg-orange-600 text-white border border-orange-600 px-6 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
             Contact Us
             </button>
           </a>
-        </div>
+          <a href="../../login.html">
+            <button class="text-m whitespace-nowrap cursor-pointer bg-orange-600 text-white border border-orange-600 px-6 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
+            Login
+            </button>
+          </a>
       </div>
+
     </div>
   </nav>
 
