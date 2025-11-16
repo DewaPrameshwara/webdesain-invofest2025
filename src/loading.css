@@ -1,3 +1,6 @@
+:root {
+     --loadingborder: #5389da;
+}
 #global-loader {
             position: fixed;
             top: 0; left: 0;
@@ -25,7 +28,7 @@
             position: absolute;
             width: 70px; height: 70px;
             border: 5px solid #e5e7eb;
-            border-top: 5px solid var(--primary);
+            border-top: 5px solid var(--loadingborder);
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
