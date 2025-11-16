@@ -1,17 +1,17 @@
-const apiKey = 'AIzaSyCiUalkzvaGL_6FvXh1SWZoXKOKWVNp2fU'
-const video = document.getElementById('youtubeVideo')
-const videoSrc = video.getAttribute('src')
-const videoId = getYoutubeId(videoSrc)
-const textChannel = document.getElementById("textChannel")
-const textTitle = document.getElementById("textTitle")
-const ppChannel = document.getElementById("ppChannel")
+import { APIKEY } from "./youtubeAPI.js";
 
-getYoutubeInfo(videoId, apiKey)
+const apiKey = APIKEY;
+const video = document.getElementById("youtubeVideo");
+const videoSrc = video.getAttribute("src");
+const videoId = getYoutubeId(videoSrc);
+const textChannel = document.getElementById("textChannel");
+const textTitle = document.getElementById("textTitle");
+const ppChannel = document.getElementById("ppChannel");
+
+getYoutubeInfo(videoId, apiKey);
 
 async function getYoutubeInfo(videoId, apiKey) {
-  const videoRes = await fetch(
-    `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`
-  );
+  const videoRes = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`);
   const videoData = await videoRes.json();
 
   if (!videoData.items || videoData.items.length === 0) {
@@ -21,9 +21,7 @@ async function getYoutubeInfo(videoId, apiKey) {
 
   const channelId = videoData.items[0].snippet.channelId;
 
-  const channelRes = await fetch(
-    `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${apiKey}`
-  );
+  const channelRes = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${apiKey}`);
   const channelData = await channelRes.json();
 
   if (!channelData.items || channelData.items.length === 0) {
