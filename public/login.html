@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeyHealth - Demo</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338ca;
+            --danger: #ef4444;
+            --success: #10b981;
+            --bg: #f3f4f6;
+            --text: #1f2937;
+            --text-muted: #6b7280;
+        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background: var(--bg); margin: 0; color: var(--text); }
+        
+        .container { background: white; padding: 2.5rem; border-radius: 16px; width: 100%; max-width: 400px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); position: relative; overflow: hidden; }
+        
+        .screen { display: none; animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .screen.active { display: block; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+
+        h2 { margin-top: 0; color: var(--text); font-weight: 700; margin-bottom: 0.5rem; }
+        p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-top: 0; margin-bottom: 1.5rem; }
+        
+
+        .input-group { position: relative; margin-bottom: 1rem; }
+        input { width: 100%; padding: 14px; padding-right: 45px; box-sizing: border-box; border: 1px solid #e5e7eb; border-radius: 10px; outline: none; background: #f9fafb; transition: all 0.2s; font-size: 1rem; }
+        input:focus { border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); }
+        
+        .toggle-password { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #9ca3af; font-size: 1.1rem; }
+        
+
+        button { width: 100%; padding: 14px; background: var(--primary); color: white; border: none; border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: 0.2s; margin-top: 1rem; }
+        button:hover { background: var(--primary-hover); }
+        button:disabled { background: #9ca3af; cursor: not-allowed; }
+        
+        button.secondary { background: #e5e7eb; color: #374151; }
+        button.secondary:hover { background: #d1d5db; }
+
+        .error-msg { color: var(--danger); font-size: 0.85rem; display: none; margin-top: 4px; font-weight: 500; }
+        .link { color: var(--primary); cursor: pointer; font-weight: 600; transition: color 0.2s; }
+        .link:hover { color: #3730a3; text-decoration: underline; }
+
+
+        .otp-container { display: flex; gap: 10px; justify-content: center; margin: 25px 0; }
+        .otp-input { width: 50px; height: 50px; text-align: center; font-size: 1.5rem; font-weight: bold; padding: 0; }
+
+        .strength-meter { height: 4px; width: 100%; background: #e5e7eb; margin-top: 8px; border-radius: 2px; overflow: hidden; display: none; }
+        .strength-bar { height: 100%; width: 0%; transition: width 0.3s ease, background-color 0.3s; }
+
+
+        .profile-card { text-align: center; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 20px; }
+        .avatar { width: 80px; height: 80px; background: linear-gradient(135deg, #6366f1, #4338ca); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 15px; font-weight: bold; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2); }
+        .status-badge { display: inline-block; padding: 4px 12px; background: #d1fae5; color: #065f46; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-top: 10px; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="login-screen" class="screen active">
+        <h2>Welcome Back!</h2>
+        <p>Enter your credentials to access your account.</p>
+        
+        <div class="input-group">
+            <input type="email" id="login-email" placeholder="Email address">
+        </div>
+        <small id="login-email-error" class="error-msg">Email tidak ditemukan</small>
+
+        <div class="input-group">
+            <input type="password" id="login-pass" placeholder="Password">
+            <span class="toggle-password" onclick="togglePass('login-pass', this)">👁️</span>
+        </div>
+        <small id="login-pass-error" class="error-msg">Password salah</small>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; margin-top: 15px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #4b5563;">
+                <input type="checkbox" id="remember-me" style="width: 18px; height: 18px; margin: 0;"> Remember me
+            </label>
+            <span class="link" onclick="switchScreen('forgot-screen')">Forgot Password?</span>
+        </div>
+
+        <button id="login-btn" onclick="handleLogin()">Login</button>
+        
+        <div style="text-align: center; margin-top: 25px; font-size: 0.9rem; color: #6b7280;">
+            New member? <span class="link" onclick="switchScreen('register-screen')">Register now</span>
+        </div>
+    </div>
+
+    <div id="register-screen" class="screen">
+        <h2>Create Account</h2>
+        <p>Join HeyHealth for a better life.</p>
+        
+        <div class="input-group"><input type="text" id="reg-name" placeholder="Full Name"></div>
+        <div class="input-group"><input type="email" id="reg-email" placeholder="Email address"></div>
+        
+        <div class="input-group">
+            <input type="password" id="reg-pass" placeholder="Create Password" oninput="checkStrength(this.value)">
+            <span class="toggle-password" onclick="togglePass('reg-pass', this)">👁️</span>
+            
+            <div class="strength-meter" id="strength-meter"><div class="strength-bar" id="strength-bar"></div></div>
+            <small id="strength-text" style="font-size: 0.75rem; color: #6b7280; display: block; margin-top: 5px;">Min 6 chars, include number & symbol</small>
+        </div>
+
+        <button onclick="handleRegister()">Sign Up</button>
+        <div style="text-align: center; margin-top: 20px; font-size: 0.9rem;">
+            Already a member? <span class="link" onclick="switchScreen('login-screen')">Log in</span>
+        </div>
+    </div>
+
+    <div id="dashboard-screen" class="screen">
+        <div class="profile-card">
+            <div class="avatar" id="dash-avatar">U</div>
+            <h2 id="dash-name" style="margin-bottom: 5px; font-size: 1.5rem;">User Name</h2>
+            <p id="dash-email" style="margin-bottom: 5px;">user@email.com</p>
+            <span class="status-badge">VERIFIED MEMBER</span>
+        </div>
+
+        <div style="padding: 0 10px;">
+            <p>Selamat datang di Dashboard HeyHealth! Anda telah berhasil masuk ke dalam sistem yang aman.</p>
+        </div>
+
+        <button class="secondary" onclick="handleLogout()">Logout</button>
+    </div>
+
+    <div id="forgot-screen" class="screen">
+        <h2>Forgot Password</h2>
+        <p>Don't worry! Enter your email to reset.</p>
+        <div class="input-group"><input type="email" id="forgot-email" placeholder="youremail@gmail.com"></div>
+        <small id="forgot-error" class="error-msg">Email tidak terdaftar</small>
+        <button onclick="handleForgotPassword()">Send OTP Code</button>
+        <div style="text-align: center; margin-top: 20px;">
+            <span class="link" onclick="switchScreen('login-screen')">Back to Login</span>
+        </div>
+    </div>
+
+    <div id="otp-screen" class="screen">
+        <h2>Check your email</h2>
+        <p>We sent a code to <b id="otp-email-display" style="color: #1f2937;">email</b>.<br>Demo Code: <b>12345</b></p>
+        
+        <div class="otp-container">
+            <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 'otp2')">
+            <input type="text" class="otp-input" id="otp2" maxlength="1" oninput="moveToNext(this, 'otp3')">
+            <input type="text" class="otp-input" id="otp3" maxlength="1" oninput="moveToNext(this, 'otp4')">
+            <input type="text" class="otp-input" id="otp4" maxlength="1" oninput="moveToNext(this, 'otp5')">
+            <input type="text" class="otp-input" id="otp5" maxlength="1" oninput="moveToNext(this, 'final')">
+        </div>
+        <small id="otp-error" class="error-msg" style="text-align: center; margin-bottom: 15px;">Kode Salah!</small>
+        
+        <button onclick="handleVerifyOTP()">Verify & Proceed</button>
+        <p style="font-size: 0.85rem; text-align: center; margin-top: 20px;">Didn't receive? <span class="link">Resend</span></p>
+    </div>
+
+    <div id="reset-screen" class="screen">
+        <h2>Set New Password</h2>
+        <p>Create a strong password for your account.</p>
+        <div class="input-group">
+            <input type="password" id="new-pass" placeholder="New Password">
+            <span class="toggle-password" onclick="togglePass('new-pass', this)">👁️</span>
+        </div>
+        <div class="input-group">
+            <input type="password" id="confirm-pass" placeholder="Confirm Password">
+            <span class="toggle-password" onclick="togglePass('confirm-pass', this)">👁️</span>
+        </div>
+        <small id="reset-error" class="error-msg">Password tidak cocok</small>
+        <button onclick="handleNewPassword()">Update Password</button>
+    </div>
+
+    <div id="success-screen" class="screen" style="text-align: center; padding: 40px 0;">
+        <div style="font-size: 5rem; margin-bottom: 20px;">🎉</div>
+        <h2>Success!</h2>
+        <p>Your password has been updated successfully.</p>
+        <button onclick="switchScreen('login-screen')">Login Now</button>
+    </div>
+
+</div>
+
+<script src="../script/login.js"></script>
+
+</body>
+</html>
