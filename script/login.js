@@ -189,14 +189,22 @@
 
     function handleVerifyOTP() {
         const inputs = document.querySelectorAll('.otp-input');
-        let otp = ""; inputs.forEach(i => otp += i.value);
-        
+        const verifyBtn = document.getElementById("verifyBtn");
+        let otp = "";
+        inputs.forEach((i) => (otp += i.value));
+
         if (otp === "12345") {
-            switchScreen('reset-screen');
-        } else { 
-            showError('otp-error', true); 
-            inputs.forEach(i => i.value = ''); 
-            inputs[0].focus(); 
+          verifyBtn.classList.remove("bg-blue-600");
+          verifyBtn.classList.add("bg-[#E8F0FE]");
+          verifyBtn.classList.remove("text-white");
+          verifyBtn.classList.add("text-blue-600");
+          setTimeout(() => {
+            switchScreen("reset-screen");
+          }, 3000);
+        } else {
+          showError("otp-error", true);
+          inputs.forEach((i) => (i.value = ""));
+          inputs[0].focus();
         }
     }
 
