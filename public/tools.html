@@ -6,9 +6,18 @@
   <title>Tools | HeyHealth</title>
   <link rel="Icon" type="png" href="../asets/heyhelth-logo.svg">
   <!-- <link rel="stylesheet" href="../src/style.css"> -->
+   <link rel="stylesheet" href=../src/loading.css">
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
+
+<div id="global-loader">
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+        <img src="../asets/heyhelth-logo.svg" alt="Logo" class="spinner-logo"> 
+    </div>
+    <div class="loading-text">HeyHealth...</div>
+</div>
 
 <body class="p-0 m-0 font-[arial] overflow-x-hidden bg-[#fcf8f4]">
 
@@ -591,5 +600,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   <script src="../script/main.js"></script>
+  <script src="../script/loading.js"></script>
 </body>
 </html>

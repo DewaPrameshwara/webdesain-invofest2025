@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HeyHealth - Demo</title>
+     <link rel="stylesheet" href="../src/loading.css">
     <style>
         :root {
             --primary: #4F46E5;
@@ -60,6 +61,13 @@
     </style>
 </head>
 <body>
+<div id="global-loader">
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+        <img src="../asets/heyhelth-logo.svg" alt="Logo" class="spinner-logo"> 
+    </div>
+    <div class="loading-text">HeyHealth...</div>
+</div>
 
 <div class="container">
 
@@ -181,6 +189,7 @@
 </div>
 
 <script src="../script/login.js"></script>
+<script src="../script/loading.js"></script>
 
 </body>
 </html>
