@@ -1,6 +1,11 @@
 :root {
      --loadingborder: #5389da;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 #global-loader {
             position: fixed;
             top: 0; left: 0;
