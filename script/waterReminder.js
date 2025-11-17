@@ -15,8 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function saveHistory() {
-  const value = document.getElementById("airMinum").value;
-  if (value <= 0) return;
+  const input = document.getElementById("airMinum");
+  const amount = parseInt(input.value);
+
+  if (!amount || amount <= 0) return;
+
+  if (amount >= reminderAmount) {
+    nextReminder.setHours(nextReminder.getHours() + 1);
+    updateReminderDisplay();
+  }
 
   const now = new Date();
   const hour = String(now.getHours()).padStart("2", 0);
@@ -25,7 +32,7 @@ function saveHistory() {
   let history = JSON.parse(localStorage.getItem("history")) || [];
 
   history.push({
-    water: value,
+    water: amount,
     hour: hour,
     minute: minute,
   });
@@ -34,7 +41,10 @@ function saveHistory() {
 
   getData();
   totalWater();
+
+  input.value = "";
 }
+
 
 function deleteHistory() {
   localStorage.removeItem("history");
@@ -107,4 +117,29 @@ function template(water, hour, minute, index) {
 
 function noData() {
   historyPlace.innerHTML = `<h1 class="font-bold text-gray-600 my-5 text-2xl text-center m-auto">Mulai lah minum air hari ini</h1>`
+}
+
+let nextReminder = null; 
+let reminderAmount = 200;
+
+function getNextRoundedHour() {
+  const now = new Date();
+  now.setHours(now.getHours() + 1);
+  now.setMinutes(0);
+  now.setSeconds(0);
+
+  return now;
+}
+
+
+function initializeReminder() {
+  nextReminder = getNextRoundedHour();
+  updateReminderDisplay();
+}
+
+function updateReminderDisplay() {
+  const hour = nextReminder.getHours().toString().padStart(2, "0");
+  const minute = nextReminder.getMinutes().toString().padStart(2, "0");
+
+  document.querySelector(".timer .left h1").textContent = `Pukul ${hour}.${minute}`;
 }
