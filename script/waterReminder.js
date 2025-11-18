@@ -2,6 +2,9 @@ const historyPlace = document.querySelector('.history')
 const totalWaterPlace = document.getElementById('todayWater')
 const container = document.getElementById("editContainerContainer");
 
+const btnNormal = ["bg-orange-600", "text-white"];
+const btnHover = ["text-orange-600", "bg-white"];
+
 document.addEventListener("DOMContentLoaded", () => {
   let raw = localStorage.getItem("history");
 
@@ -17,7 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
 function saveHistory(event) {
   event.preventDefault();
   const input = document.getElementById("airMinum");
+  const saveBtn = document.getElementById("saveBtn");
   const amount = parseInt(input.value);
+
+  saveBtn.classList.remove(...btnNormal);
+  saveBtn.classList.add(...btnHover);
+  setTimeout(() => {
+    saveBtn.classList.add(...btnNormal);
+    saveBtn.classList.remove(...btnHover);
+  }, 300);
 
   if (!amount || amount <= 0) return;
 

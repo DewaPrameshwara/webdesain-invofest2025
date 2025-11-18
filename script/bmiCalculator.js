@@ -1,13 +1,38 @@
 const result = document.getElementById("result");
-
+const bb = document.getElementById("beratBadan");
+const tb = document.getElementById("tinggiBadan");
+const hitungBtn = document.getElementById("hitungBMI");
 const genderFemaleIMG = document.getElementById("female-img");
+const btnHover = ["scale-105", "bg-sky-800", "text-white"];
+const btnNormal = ["bg-white", "text-blue-800"];
+
+bb.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    e.preventDefault();
+    tb.focus();
+  }
+});
+
+tb.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    e.preventDefault();
+    hitungBtn.click();
+
+    hitungBtn.classList.add(...btnHover);
+    hitungBtn.classList.remove(...btnNormal);
+    setTimeout(() => {
+      hitungBtn.classList.remove(...btnHover);
+      hitungBtn.classList.add(...btnNormal);
+    }, 300);
+  }
+});
 
 function calculatingBMI() {
-  const bb = document.getElementById("beratBadan").value;
-  const tb = document.getElementById("tinggiBadan").value;
-  const tbM = tb / 100;
+  const bbValue = bb.value;
+  const tbValue = tb.value;
+  const tbM = tbValue / 100;
 
-  const bmi = bb / (tbM * tbM);
+  const bmi = bbValue / (tbM * tbM);
   const category = clasification(bmi);
   result.innerHTML = `${bmi.toFixed(2)} ${category}`;
 }
