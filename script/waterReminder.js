@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function saveHistory() {
+function saveHistory(event) {
+  event.preventDefault();
   const input = document.getElementById("airMinum");
   const amount = parseInt(input.value);
 
