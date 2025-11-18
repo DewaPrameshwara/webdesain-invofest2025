@@ -1,4 +1,4 @@
-   const STORAGE_KEY = 'heyhealth_users_secure';
+const STORAGE_KEY = 'heyhealth_users_secure';
 
     function safeSaveUsers(users) {
         const stringData = JSON.stringify(users);

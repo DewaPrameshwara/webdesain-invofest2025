@@ -13,6 +13,7 @@
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="../script/loading.js"></script>
+  <script src="../script/auth-navbar.js"></script>
   <style>
     html {
       scroll-behavior: smooth;
@@ -33,7 +34,7 @@
   </svg>
 
   <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full z-50">
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50">
     <div class="max-w-7xl flex flex-wrap lg:flex-nowrap items-center justify-between mx-auto p-4">
       
       <a href="./index.html" class="flex items-center space-x-3 rtl:space-x-reverse shrink-0">
@@ -104,7 +105,8 @@
             <a href="./about-us.html" class="block py-2 px-3 rounded-sm lg:p-0 text-gray-900 hover:text-orange-600" aria-current="page">About Us</a>
           </li>
           
-          <li class="lg:hidden mt-4 flex flex-col gap-3">
+<!-- mobile -->
+          <li id="nav-auth-mobile" class="lg:hidden mt-4 flex flex-col gap-3">
             <a href="./index.html#contact-section">
                 <button class="w-full text-m cursor-pointer bg-orange-600 text-white border border-orange-600 px-10 py-2 rounded-2xl hover:bg-white hover:text-orange-600 transition-all duration-300">
                 Contact Us
@@ -116,10 +118,32 @@
               </button>
             </a>
           </li>
+
+          <!-- mobile -->
+          <li id="nav-user-profile-mobile" class="hidden lg:hidden mt-4 flex flex-col gap-3 border-t border-gray-200 pt-4">
+            <div class="px-4 py-2 text-sm text-gray-700">
+                <div class="font-medium" id="dropdown-user-name-mobile">User Name</div>
+                <div class="truncate text-gray-500" id="dropdown-user-email-mobile">user@email.com</div>
+            </div>
+<!-- profil -->
+            <a href="#">
+                <button class="w-full text-m cursor-pointer bg-gray-100 text-gray-700 border border-gray-200 px-10 py-2 rounded-2xl hover:bg-gray-200 transition-all duration-300">
+                    Profile
+                </button>
+            </a>
+<!-- logout -->
+            <a href="#" onclick="handleLogout()">
+              <button class="w-full text-m cursor-pointer bg-red-100 text-red-600 border border-red-200 px-10 py-2 rounded-2xl hover:bg-red-200 transition-all duration-300">
+                Logout
+              </button>
+            </a>
+          </li>
+
         </ul>
       </div>
 
-      <div class="hidden lg:flex items-center gap-4 shrink-0">
+      <!-- desktop -->
+      <div id="nav-auth-desktop" class="hidden lg:flex items-center gap-4 shrink-0">
           <a href="./index.html#contact-section">
             <button class="text-m whitespace-nowrap cursor-pointer bg-orange-600 text-white border border-orange-600 px-6 py-2 rounded-2xl hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
             Contact Us
@@ -130,6 +154,24 @@
             Login
             </button>
           </a>
+      </div>
+
+      <div id="nav-user-profile-desktop" class="hidden lg:flex items-center gap-4 shrink-0">
+        <el-dropdown class="inline-block">
+            <button class="flex text-sm bg-gray-700 rounded-full w-9 h-9 items-center justify-center font-bold text-white hover:bg-gray-600 focus:ring-4 focus:ring-gray-300">
+                <span id="avatar-initial-desktop" class="text-white"></span>
+            </button>
+            <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition">
+                <div class="px-4 py-3">
+                    <span id="dropdown-user-name-desktop" class="block text-sm text-gray-900 font-medium">User Name</span>
+                    <span id="dropdown-user-email-desktop" class="block text-sm text-gray-500 truncate">user@email.com</span>
+                </div>
+                <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-600 hover:text-white">Profile</a>
+                    <a href="#" onclick="handleLogout()" class="block px-4 py-2 text-sm text-red-600 hover:bg-orange-600 hover:text-white">Logout</a>
+                </div>
+            </el-menu>
+        </el-dropdown>
       </div>
 
     </div>
