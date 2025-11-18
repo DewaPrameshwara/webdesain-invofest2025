@@ -138,13 +138,13 @@
         <div class="left basis-full">
           <div class="flex flex-col mt-[50px]">
             <h1 class="text-4xl font-bold text-gray-800">Water Reminder</h1>
-            <form class="flex flex-col mt-10 gap-3">
+            <form class="flex flex-col mt-10 gap-3" onsubmit="saveHistory(event)">
               <h1 class="text-2xl font-bold text-gray-800">Lacak konsumsi air minum anda:</h1>
               <input id="airMinum" type="number" min="0" placeholder="Masukan jumlah dalam mL" class="w-full px-4 py-2 border border-orange-600 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
-              <button id="saveBtn" type="reset" onclick="saveHistory()"
+              <button id="saveBtn" type="submit" onclick="saveHistory()"
                 class="flex items-center justify-center gap-x-3 border border-orange-600 bg-orange-600 text-white font-semibold py-2 rounded-lg shadow-md transition-all duration-300 cursor-pointer hover:scale-105 hover:bg-white hover:text-orange-600">
                 Tambahkan asupan
-                <svg class="fill-current w-[30px] h-[30px] hover:fill-orange-600 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 576C214 576 128 490 128 384C128 292.8 258.2 109.9 294.6 60.5C300.5 52.5 309.8 48 319.8 48L320.2 48C330.2 48 339.5 52.5 345.4 60.5C381.8 109.9 512 292.8 512 384C512 490 426 576 320 576zM240 376C240 362.7 229.3 352 216 352C202.7 352 192 362.7 192 376C192 451.1 252.9 512 328 512C341.3 512 352 501.3 352 488C352 474.7 341.3 464 328 464C279.4 464 240 424.6 240 376z"/></svg>
+                <svg class="fill-current w-[30px] h-[30px] transition-all duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 576C214 576 128 490 128 384C128 292.8 258.2 109.9 294.6 60.5C300.5 52.5 309.8 48 319.8 48L320.2 48C330.2 48 339.5 52.5 345.4 60.5C381.8 109.9 512 292.8 512 384C512 490 426 576 320 576zM240 376C240 362.7 229.3 352 216 352C202.7 352 192 362.7 192 376C192 451.1 252.9 512 328 512C341.3 512 352 501.3 352 488C352 474.7 341.3 464 328 464C279.4 464 240 424.6 240 376z"/></svg>
               </button>
               <button type="button" onclick="openSetting()"
                 class="flex items-center justify-center gap-x-3 mt-16 border border-orange-600 bg-white text-orange-600 font-semibold py-2 rounded-3xl shadow-md transition-all duration-300 cursor-pointer hover:scale-105 hover:bg-orange-600 hover:text-white">
